@@ -1,0 +1,907 @@
+<meta charset="UTF-8">
+<title>てでもぐ LPワイヤーフレーム</title>
+<style>
+  :root {
+    --page-bg: #E7E7E5;
+    --frame-bg: #FFFFFF;
+    --line: #B7B7B4;
+    --line-strong: #8C8C89;
+    --ink: #202020;
+    --ink-soft: #6E6E6B;
+    --fill: #E9E9E6;
+    --fill-strong: #DADAD6;
+    --accent: #3A3A38;
+    --accent-ink: #FFFFFF;
+  }
+
+  :root[data-theme="dark"] {
+    --page-bg: #131313;
+    --frame-bg: #1C1C1B;
+    --line: #45453F;
+    --line-strong: #5C5C55;
+    --ink: #ECECE9;
+    --ink-soft: #A2A29C;
+    --fill: #2A2A28;
+    --fill-strong: #343432;
+    --accent: #D8D8D3;
+    --accent-ink: #1C1C1B;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --page-bg: #131313;
+      --frame-bg: #1C1C1B;
+      --line: #45453F;
+      --line-strong: #5C5C55;
+      --ink: #ECECE9;
+      --ink-soft: #A2A29C;
+      --fill: #2A2A28;
+      --fill-strong: #343432;
+      --accent: #D8D8D3;
+      --accent-ink: #1C1C1B;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--page-bg);
+    color: var(--ink);
+    font-family: "Hiragino Sans", "Yu Gothic Medium", "Yu Gothic", Arial, "Noto Sans JP", sans-serif;
+    line-height: 1.65;
+  }
+
+  .doc-head {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px 8px;
+    text-align: center;
+  }
+  .doc-head .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 0 0 8px;
+  }
+  .doc-head h1 {
+    font-size: 20px;
+    margin: 0 0 6px;
+    font-weight: 700;
+  }
+  .doc-head p {
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+
+  .stage {
+    max-width: 900px;
+    margin: 32px auto 100px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .device {
+    width: 390px;
+    max-width: 100%;
+    background: var(--frame-bg);
+    border: 1px solid var(--line-strong);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  }
+
+  .device-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--line);
+    background: var(--fill);
+  }
+  .device-bar span {
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: var(--ink-soft);
+  }
+
+  .zone {
+    position: relative;
+    padding: 22px 18px;
+    border-bottom: 1px dashed var(--line);
+  }
+  .zone:last-of-type { border-bottom: none; }
+
+  .zone-tag {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+    background: var(--fill);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 2px 6px;
+  }
+
+  .zone-inner { margin-top: 16px; }
+
+  /* image placeholder */
+  .img-ph {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border: 1px dashed var(--line-strong);
+    border-radius: 8px;
+    background:
+      repeating-linear-gradient(45deg, var(--fill) 0 8px, var(--fill-strong) 8px 9px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 14px;
+  }
+  .img-ph span {
+    font-size: 11px;
+    color: var(--ink-soft);
+    background: var(--frame-bg);
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--line);
+  }
+  .img-ph.short { aspect-ratio: 16/6; }
+  .img-ph.square { aspect-ratio: 1/1; width: 84px; margin: 0 auto 10px; }
+
+  /* FV: 画像の上に文言・バッジを重ねるヒーローパターン */
+  .fv-hero {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    border: 1px dashed var(--line-strong);
+    border-radius: 8px;
+    overflow: hidden;
+    background: repeating-linear-gradient(45deg, var(--fill) 0 8px, var(--fill-strong) 8px 9px);
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 16px;
+  }
+  .fv-hero-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 10px;
+    color: var(--ink-soft);
+    background: var(--frame-bg);
+    padding: 2px 7px;
+    border-radius: 4px;
+    border: 1px solid var(--line);
+    z-index: 2;
+  }
+  .fv-hero-scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.28) 48%, rgba(0,0,0,0) 78%);
+  }
+  .fv-hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 18px 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .fv-hero-content .badges { margin-bottom: 0; }
+  .fv-hero-content .badge {
+    color: #fff;
+    border-color: rgba(255,255,255,0.75);
+    background: rgba(0,0,0,0.2);
+  }
+  .fv-hero-content h2.wf { color: #fff; margin: 0; }
+  .fv-hero-content p.wf-sub { color: rgba(255,255,255,0.88); margin: 0; }
+  .fv-hero-content .btn { margin-top: 2px; }
+
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 14px;
+  }
+  .badge {
+    font-size: 10.5px;
+    color: var(--ink-soft);
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    padding: 4px 10px;
+  }
+
+  h2.wf {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 0 6px;
+    line-height: 1.5;
+  }
+  p.wf-sub {
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    margin: 0 0 14px;
+  }
+
+  ul.wf-list {
+    margin: 0 0 4px;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 8px;
+  }
+  ul.wf-list li {
+    font-size: 12.5px;
+    color: var(--ink);
+    padding-left: 16px;
+    position: relative;
+  }
+  ul.wf-list li::before {
+    content: "―";
+    position: absolute;
+    left: 0;
+    color: var(--line-strong);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  a.btn {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: var(--accent);
+    color: var(--accent-ink);
+    font-weight: 700;
+    font-size: 13.5px;
+    padding: 12px 0;
+    border-radius: 6px;
+    margin-top: 6px;
+  }
+  .btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .icon-item {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 10px 8px;
+    font-size: 11.5px;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .icon-item .dot {
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: var(--fill-strong);
+    border: 1px solid var(--line-strong);
+    flex-shrink: 0;
+  }
+
+  .quote-box {
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--line-strong);
+    border-radius: 4px;
+    padding: 8px 10px;
+    font-size: 11.5px;
+    color: var(--ink-soft);
+    margin-bottom: 8px;
+  }
+
+  .table-wf {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+  table.wf {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 10.5px;
+    min-width: 420px;
+  }
+  table.wf th, table.wf td {
+    border: 1px solid var(--line);
+    padding: 6px 8px;
+    text-align: left;
+    white-space: nowrap;
+  }
+  table.wf th { background: var(--fill); font-weight: 700; }
+
+  .pintro {
+    font-size: 11.5px;
+    color: var(--ink-soft);
+    margin: 0 0 12px;
+  }
+  .pgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+  a.pcard {
+    display: block;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 8px;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .pcard .img-ph {
+    aspect-ratio: 1 / 1;
+    margin-bottom: 8px;
+  }
+  .pcard .img-ph span { font-size: 9px; padding: 2px 5px; }
+  .pcard .pname {
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 3px;
+  }
+  .pcard .pprice {
+    font-size: 11px;
+    color: var(--ink-soft);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .qty-block {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+  .qty-block h4 {
+    margin: 0 0 4px;
+    font-size: 12.5px;
+    font-weight: 700;
+  }
+  .qty-block .bnote {
+    font-size: 10.5px;
+    color: var(--ink-soft);
+    margin: 0 0 10px;
+  }
+  .qty-row + .qty-row {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--line);
+  }
+  .qty-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .qty-steps {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    font-size: 10.5px;
+  }
+  .qstep {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--ink-soft);
+  }
+  .qstep b { color: var(--ink); font-weight: 700; }
+  .qstep.now { color: var(--ink); }
+  .qarrow { color: var(--line-strong); }
+  .qoff {
+    font-size: 9.5px;
+    font-weight: 700;
+    color: var(--ink);
+    border: 1px solid var(--line-strong);
+    border-radius: 3px;
+    padding: 0 4px;
+  }
+
+  .bundle-block {
+    border: 1px solid var(--line-strong);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 8px;
+  }
+  .bundle-block h4 {
+    margin: 0 0 4px;
+    font-size: 12.5px;
+    font-weight: 700;
+  }
+  .bundle-block .bnote {
+    font-size: 10.5px;
+    color: var(--ink-soft);
+    margin: 0 0 10px;
+  }
+  a.bundle-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 2px;
+    border-bottom: 1px dashed var(--line);
+    text-decoration: none;
+    color: var(--ink);
+  }
+  a.bundle-row:last-of-type { border-bottom: none; }
+  .bundle-row .bname-wrap { display: flex; flex-direction: column; gap: 2px; }
+  .bundle-row .bname {
+    font-size: 11.5px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .bundle-row .btop-tag {
+    font-size: 9px;
+    font-weight: 700;
+    color: var(--frame-bg);
+    background: var(--accent);
+    border-radius: 3px;
+    padding: 1px 5px;
+  }
+  .bundle-row .bcompare {
+    font-size: 10px;
+    color: var(--ink-soft);
+  }
+  .bundle-row .bcompare s { opacity: 0.8; }
+  .bundle-row .bprice-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+    flex-shrink: 0;
+  }
+  .bundle-row .boff {
+    font-size: 9.5px;
+    font-weight: 700;
+    color: var(--ink);
+    border: 1px solid var(--line-strong);
+    border-radius: 3px;
+    padding: 1px 5px;
+  }
+  .bundle-row .bprice {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+  }
+  .bundle-foot {
+    font-size: 10px;
+    color: var(--ink-soft);
+    margin: 4px 2px 0;
+  }
+
+  .secondary-link {
+    display: block;
+    text-align: center;
+    font-size: 11px;
+    color: var(--ink-soft);
+    text-decoration: underline;
+    margin-top: 4px;
+  }
+
+  .step-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  .step-num {
+    width: 24px; height: 24px;
+    border: 1px solid var(--line-strong);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 700;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+  }
+  .step-text b { display: block; font-size: 12.5px; margin-bottom: 1px; }
+  .step-text span { font-size: 11px; color: var(--ink-soft); }
+
+  .faq-item {
+    border-bottom: 1px solid var(--line);
+    padding: 10px 0;
+  }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .faq-q .mark {
+    width: 16px; height: 16px;
+    border: 1px solid var(--line-strong);
+    border-radius: 3px;
+    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px;
+    color: var(--ink-soft);
+  }
+  .faq-a {
+    font-size: 11.5px;
+    color: var(--ink-soft);
+    margin-top: 6px;
+    padding-left: 24px;
+  }
+  .faq-link {
+    font-size: 11px;
+    color: var(--ink-soft);
+    text-decoration: underline;
+    margin-top: 8px;
+    display: inline-block;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 11px;
+    color: var(--ink-soft);
+  }
+  .footer-links .copyright {
+    margin-top: 6px;
+    font-size: 10px;
+  }
+
+  @media (max-width: 460px) {
+    .stage { padding: 0 10px; margin-top: 20px; }
+  }
+</style>
+
+<div class="doc-head">
+  <p class="eyebrow">Low-fidelity Wireframe / Mobile 390px</p>
+  <h1>てでもぐ LP ワイヤーフレーム</h1>
+  <p>灰色の枠は画像・写真の差し込み位置を示すプレースホルダーです。文言は構成案のドラフトコピーをそのまま使用しています。</p>
+</div>
+
+<div class="stage">
+  <div class="device">
+    <div class="device-bar"><span>MOBILE PREVIEW ・ 390px</span></div>
+
+    <!-- 01 FV -->
+    <div class="zone">
+      <span class="zone-tag">01 / FV</span>
+      <div class="zone-inner">
+        <div class="fv-hero">
+          <span class="fv-hero-label">写真:赤ちゃんが手づかみで食べる様子</span>
+          <div class="fv-hero-scrim"></div>
+          <div class="fv-hero-content">
+            <h2 class="wf">もう、毎日「何を食べさせよう」と悩まない。</h2>
+            <p class="wf-sub">手づかみ食べのために生まれた、0歳から安心してあげられる固形の離乳食「てでもぐ」</p>
+            <div class="badges">
+              <span class="badge">管理栄養士監修</span>
+              <span class="badge">口コミ★4.33</span>
+              <span class="badge">化学添加物不使用</span>
+              <span class="badge">初回500円OFF</span>
+            </div>
+            <a class="btn" href="#products">商品を見てみる</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 共感 -->
+    <div class="zone">
+      <span class="zone-tag">02 / 共感</span>
+      <div class="zone-inner">
+        <h2 class="wf">こんなお悩みありませんか?</h2>
+        <ul class="wf-list">
+          <li>仕事や家事で、離乳食を作る時間が取れない</li>
+          <li>手づかみ食べ用の固形メニューを考えるのが大変</li>
+          <li>準備と後片付けが、地味にしんどい</li>
+          <li>落ち着いて食べてくれず、食事のたびに気疲れする</li>
+          <li>レトルトだと、食べる練習になっている気がしない</li>
+          <li>メニューがワンパターンになりがち</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 03 教育 -->
+    <div class="zone">
+      <span class="zone-tag">03 / 教育</span>
+      <div class="zone-inner">
+        <h2 class="wf">実は、手づかみ食べは赤ちゃんの発達にとってとても大切です。</h2>
+        <div class="grid-2" style="margin-bottom:14px;">
+          <div class="icon-item"><span class="dot"></span>運動機能の発達</div>
+          <div class="icon-item"><span class="dot"></span>自己表現力の向上</div>
+          <div class="icon-item"><span class="dot"></span>食べる楽しさの理解</div>
+          <div class="icon-item"><span class="dot"></span>口腔機能の発達</div>
+          <div class="icon-item"><span class="dot"></span>感覚の発達</div>
+          <div class="icon-item"><span class="dot"></span>楽しい食事時間</div>
+        </div>
+        <div class="quote-box">(監修管理栄養士のコメント枠 ― 差し込み予定)</div>
+      </div>
+    </div>
+
+    <!-- 04 解決策 -->
+    <div class="zone">
+      <span class="zone-tag">04 / 解決策</span>
+      <div class="zone-inner">
+        <div class="img-ph short"><span>商品パッケージ・調理イメージ</span></div>
+        <h2 class="wf">「てでもぐ」は、手づかみ食べのために生まれました。</h2>
+        <p class="wf-sub">レンジで温めるだけ。0歳から安心してあげられる固形の離乳食です。</p>
+        <ul class="wf-list">
+          <li>赤ちゃんがつかみやすいサイズ</li>
+          <li>飲み込みやすい水分量</li>
+          <li>歯ぐきでかみやすいやわらかさ</li>
+          <li>調理不要・レンジ加熱のみ / 全7種のメニュー展開</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 05 選ばれる理由 -->
+    <div class="zone">
+      <span class="zone-tag">05 / 安心</span>
+      <div class="zone-inner">
+        <h2 class="wf">選ばれる理由</h2>
+        <div class="grid-2">
+          <div class="icon-item"><span class="dot"></span>化学添加物不使用</div>
+          <div class="icon-item"><span class="dot"></span>国産原材料優先</div>
+          <div class="icon-item"><span class="dot"></span>7大アレルゲン不使用</div>
+          <div class="icon-item"><span class="dot"></span>有機JAS認定</div>
+          <div class="icon-item"><span class="dot"></span>管理栄養士監修</div>
+          <div class="icon-item"><span class="dot"></span>つまみやすい形状</div>
+          <div class="icon-item"><span class="dot"></span>全国配送対応</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06 比較表 -->
+    <div class="zone">
+      <span class="zone-tag">06 / 比較</span>
+      <div class="zone-inner">
+        <h2 class="wf">他社との違い</h2>
+        <div class="table-wf">
+          <table class="wf">
+            <thead>
+              <tr><th></th><th>てでもぐ</th><th>A社(高級レトルト)</th><th>C社(幼児食宅配)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>手づかみ対応</td><td>◎</td><td>△</td><td>△</td></tr>
+              <tr><td>対象月齢</td><td>9ヶ月〜</td><td>5ヶ月〜</td><td>1歳半〜</td></tr>
+              <tr><td>形状</td><td>固形</td><td>ペースト中心</td><td>おかず中心</td></tr>
+              <tr><td>調理の手間</td><td>レンジのみ</td><td>そのまま</td><td>盛り付けのみ</td></tr>
+              <tr><td>栄養面</td><td>管理栄養士監修</td><td>企業基準</td><td>企業基準</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- 07 お客様の声 -->
+    <div class="zone">
+      <span class="zone-tag">07 / 証拠</span>
+      <div class="zone-inner">
+        <h2 class="wf">お客様の声</h2>
+        <p class="wf-sub">口コミ評価平均 ★4.33</p>
+        <div class="quote-box">1歳2ヶ月の子どもがおにぎりをぱくぱく食べてくれました。</div>
+        <div class="quote-box">俵形が握りやすく、ほどよい柔らかさで食べやすいです。</div>
+        <div class="quote-box">レトルトを食べない子が、てでもぐはよく食べます。</div>
+      </div>
+    </div>
+
+    <!-- 08 商品ラインナップ -->
+    <div class="zone" id="products" style="scroll-margin-top:16px;">
+      <span class="zone-tag">08 / 検討</span>
+      <div class="zone-inner">
+        <h2 class="wf">商品ラインナップ&価格</h2>
+        <p class="pintro">全7種類、単品¥1,580〜。カードをタップすると各商品ページへ移動します。</p>
+
+        <div class="pgrid">
+          <a class="pcard" href="https://shop.eatbyhand.co.jp/products/tofuhamburg" target="_blank" rel="noopener">
+            <div class="img-ph"><span>写真</span></div>
+            <div class="pname">ぶた肉と野菜入り豆腐ハンバーグ</div>
+            <div class="pprice">¥1,690〜</div>
+          </a>
+          <a class="pcard" href="https://shop.eatbyhand.co.jp/products/chickenhamburg" target="_blank" rel="noopener">
+            <div class="img-ph"><span>写真</span></div>
+            <div class="pname">とり肉と野菜入り豆腐ハンバーグ</div>
+            <div class="pprice">¥1,690〜</div>
+          </a>
+          <a class="pcard" href="https://shop.eatbyhand.co.jp/products/fish-hamburg" target="_blank" rel="noopener">
+            <div class="img-ph"><span>写真</span></div>
+            <div class="pname">お魚入り豆腐ハンバーグ</div>
+            <div class="pprice">¥1,690〜</div>
+          </a>
+          <a class="pcard" href="https://shop.eatbyhand.co.jp/products/oyaki" target="_blank" rel="noopener">
+            <div class="img-ph"><span>写真</span></div>
+            <div class="pname">北海道産じゃがいものおやき</div>
+            <div class="pprice">¥1,690〜</div>
+          </a>
+          <a class="pcard" href="https://shop.eatbyhand.co.jp/products/riceball_sesame" target="_blank" rel="noopener">
+            <div class="img-ph"><span>写真</span></div>
+            <div class="pname">きな粉とすりごまの軟飯おにぎり</div>
+            <div class="pprice">¥1,580〜</div>
+          </a>
+          <a class="pcard" href="https://shop.eatbyhand.co.jp/products/riceball_aosa" target="_blank" rel="noopener">
+            <div class="img-ph"><span>写真</span></div>
+            <div class="pname">あおさとしらすの軟飯おにぎり</div>
+            <div class="pprice">¥1,580〜</div>
+          </a>
+          <a class="pcard" href="https://shop.eatbyhand.co.jp/products/riceball_driedbonito" target="_blank" rel="noopener">
+            <div class="img-ph"><span>写真</span></div>
+            <div class="pname">小松菜とかつおぶしの軟飯おにぎり</div>
+            <div class="pprice">¥1,580〜</div>
+          </a>
+        </div>
+
+        <div class="qty-block">
+          <h4>同じフレーバーを複数袋買うほど、単価が下がります</h4>
+          <p class="bnote">まとめ買いすると1袋あたりの価格がおトクになります。</p>
+          <div class="qty-row">
+            <span class="qty-label">おやき・豆腐ハンバーグ系(4種)</span>
+            <div class="qty-steps">
+              <span class="qstep">1袋 ¥1,690</span>
+              <span class="qarrow">→</span>
+              <span class="qstep"><b>3袋</b> ¥4,550<span class="qoff">10%OFF</span></span>
+              <span class="qarrow">→</span>
+              <span class="qstep"><b>5袋</b> ¥7,080<span class="qoff">16%OFF</span></span>
+            </div>
+          </div>
+          <div class="qty-row">
+            <span class="qty-label">軟飯おにぎり系(3種)</span>
+            <div class="qty-steps">
+              <span class="qstep">1袋 ¥1,580</span>
+              <span class="qarrow">→</span>
+              <span class="qstep"><b>3袋</b> ¥4,130<span class="qoff">13%OFF</span></span>
+              <span class="qarrow">→</span>
+              <span class="qstep"><b>5袋</b> ¥6,370<span class="qoff">19%OFF</span></span>
+            </div>
+          </div>
+          <p class="bundle-foot">※各商品ページで袋数を選んで購入できます。定期便ならさらに10%OFF</p>
+        </div>
+
+        <div class="bundle-block">
+          <h4>単品を組み合わせるより、セットの方がおトクです</h4>
+          <p class="bnote">単品を同じ点数バラ買いした場合の合計と比較。カードをタップすると各セットの商品ページへ移動します。</p>
+
+          <a class="bundle-row" href="https://shop.eatbyhand.co.jp/products/starterset" target="_blank" rel="noopener">
+            <div class="bname-wrap">
+              <span class="bname">つかみ食べスタート2種セット</span>
+              <span class="bcompare">おやき+ぶた肉ハンバーグ / 単品合計<s>¥3,380</s></span>
+            </div>
+            <div class="bprice-wrap">
+              <span class="boff">7%OFF・250円おトク</span>
+              <span class="bprice">¥3,130</span>
+            </div>
+          </a>
+
+          <a class="bundle-row" href="https://shop.eatbyhand.co.jp/products/riceball_assort" target="_blank" rel="noopener">
+            <div class="bname-wrap">
+              <span class="bname">軟飯おにぎり3種セット</span>
+              <span class="bcompare">おにぎり全3種 / 単品合計<s>¥4,740</s></span>
+            </div>
+            <div class="bprice-wrap">
+              <span class="boff">13%OFF・610円おトク</span>
+              <span class="bprice">¥4,130</span>
+            </div>
+          </a>
+
+          <a class="bundle-row" href="https://shop.eatbyhand.co.jp/products/all_set" target="_blank" rel="noopener">
+            <div class="bname-wrap">
+              <span class="bname">そうざい4種セット</span>
+              <span class="bcompare">おやき+ハンバーグ全3種 / 単品合計<s>¥6,760</s></span>
+            </div>
+            <div class="bprice-wrap">
+              <span class="boff">8%OFF・550円おトク</span>
+              <span class="bprice">¥6,210</span>
+            </div>
+          </a>
+
+          <a class="bundle-row" href="https://shop.eatbyhand.co.jp/products/assortment" target="_blank" rel="noopener">
+            <div class="bname-wrap">
+              <span class="bname">全種セット<span class="btop-tag">最もおトク</span></span>
+              <span class="bcompare">全7種コンプリート / 単品合計<s>¥11,500</s></span>
+            </div>
+            <div class="bprice-wrap">
+              <span class="boff">14%OFF・1,610円おトク</span>
+              <span class="bprice">¥9,890</span>
+            </div>
+          </a>
+
+          <p class="bundle-foot">※定期便を選ぶと、セット価格からさらに10%OFFになります</p>
+        </div>
+
+        <a class="secondary-link" href="https://shop.eatbyhand.co.jp/collections/all" target="_blank" rel="noopener">在庫・レビューも含めて商品一覧ページで確認する</a>
+      </div>
+    </div>
+
+    <!-- 09 利用の流れ -->
+    <div class="zone">
+      <span class="zone-tag">09 / 障壁解消</span>
+      <div class="zone-inner">
+        <h2 class="wf">ご利用の流れ</h2>
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-text"><b>注文する</b><span>商品を選んでオンラインで注文</span></div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-text"><b>冷凍で届く</b><span>最短3営業日で発送、配送日時指定可</span></div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-text"><b>レンジで温めるだけ</b><span>調理不要、そのまま食卓へ</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 FAQ -->
+    <div class="zone">
+      <span class="zone-tag">10 / 障壁解消</span>
+      <div class="zone-inner">
+        <h2 class="wf">よくある質問</h2>
+        <div class="faq-item">
+          <div class="faq-q"><span>何ヶ月頃から食べられますか?</span><span class="mark">−</span></div>
+          <div class="faq-a">目安は生後9ヶ月頃、歯が5〜8本で離乳食後期が食べられればご利用いただけます</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><span>賞味期限はどれくらいですか?</span><span class="mark">−</span></div>
+          <div class="faq-a">正しい保管で製造から1年、解凍後は2〜3日以内にお召し上がりください</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><span>アレルギー対応は?</span><span class="mark">−</span></div>
+          <div class="faq-a">7大アレルゲン不使用ですが、工場では乳製品等を扱うため重篤な場合は医師にご相談ください</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><span>キャンセル・返品はできますか?</span><span class="mark">−</span></div>
+          <div class="faq-a">キャンセルは注文翌日朝10時まで、食品のため返品は不可、不良品・注文違いのみ交換対応</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><span>送料はいくらですか?</span><span class="mark">−</span></div>
+          <div class="faq-a">配送・送料ページをご確認ください</div>
+        </div>
+        <a class="faq-link" href="https://shop.eatbyhand.co.jp/a/faq" target="_blank" rel="noopener">よくある質問一覧はこちら ›</a>
+      </div>
+    </div>
+
+    <!-- 11 最終CTA -->
+    <div class="zone">
+      <span class="zone-tag">11 / 後押し</span>
+      <div class="zone-inner">
+        <h2 class="wf">今なら初回500円OFF。今日から「てでもぐ」、始めませんか?</h2>
+        <div class="badges">
+          <span class="badge">管理栄養士監修</span>
+          <span class="badge">口コミ★4.33</span>
+          <span class="badge">全国配送対応</span>
+        </div>
+        <a class="btn" href="#products">商品を見てみる</a>
+      </div>
+    </div>
+
+    <!-- 12 フッター -->
+    <div class="zone">
+      <span class="zone-tag">12 / フッター</span>
+      <div class="zone-inner">
+        <div class="footer-links">
+          <span>運営会社情報</span>
+          <span>プライバシーポリシー</span>
+          <span class="copyright">© TEDEMOGU</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
