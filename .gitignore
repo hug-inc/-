@@ -1,0 +1,27 @@
+# 社内向け引き継ぎ資料(Shopify管理画面URL・クーポンコード等を含むため非公開)
+CLAUDE_HANDOFF.md
+
+# XD から抽出した元データ(巨大・LP表示には不要。切り出し済みの assets/<section>/ を使用)
+local/assets/xd/
+local/assets/xd-reference.png
+local/assets/xd-artboard.png
+local/assets/reference-crops/
+
+# 旧試作・自動生成版(現行の index.html に置き換え済み)
+local/index-agc-generated.html.bak
+local/index-layered.html
+local/index-nested.html
+local/index-coded-draft.html
+local/index-reference.html
+local/generate-xd-html.mjs
+local/coded.css
+local/styles.css
+local/xd-exact.css
+local/script.js
+
+# 切り出し前の元画像(未使用。各セクションの assets/ に最適化済みを配置)
+local/assets/*.png
+local/assets/*.jpg
+
+# OS
+.DS_Store

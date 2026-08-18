@@ -1,0 +1,288 @@
+/* ===== MV section (mobile column) =====
+   All child elements are absolutely positioned using coordinates
+   measured directly from the XD artboard (MV group, canvas-relative,
+   with the content column's left edge normalized to 0). */
+.mv {
+  position: relative;
+  height: 668px;
+  /* XD: cream above/behind the photo, white below it (price & CTA area) */
+  background: linear-gradient(var(--cream) 0px, var(--cream) 469px, #FEFDFC 469px, #FEFDFC 100%);
+  overflow: visible;
+}
+
+.mv-logo {
+  position: absolute;
+  left: 243px;
+  top: 8px;
+  width: 119px;
+  height: auto;
+  z-index: 5;
+}
+
+/* Real text kept for SEO/a11y; the visible headline is the XD-exact
+   outline SVG (the design hand-kerns these glyphs as vector outlines). */
+.mv-headline {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.mv-headline-art {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  width: 375px;
+  height: 145px;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.mv-sparkle {
+  position: absolute;
+  left: 142px;
+  top: 168px;
+  width: 63px;
+  height: auto;
+  z-index: 4;
+}
+
+.mv-subhead {
+  position: absolute;
+  left: 16px;
+  top: 218px;
+  z-index: 4;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0.7px;
+  color: var(--brown);
+}
+
+.mv-subhead .hl,
+.mv-subhead .brand { color: var(--orange); }
+
+.mv-flower {
+  position: absolute;
+  left: 2px;
+  top: 335px;
+  width: 70px;
+  height: auto;
+  z-index: 1;
+}
+
+.mv-photo {
+  position: absolute;
+  left: 0;
+  top: 54px;
+  width: 375px;
+  height: 415px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.mv-photo img {
+  position: absolute;
+  left: -33.5px;
+  top: 16px;
+  width: 647px;
+  height: auto;
+}
+
+.mv-leaf-tr {
+  position: absolute;
+  left: 317px;
+  top: 45px;
+  width: 50px;
+  height: auto;
+  z-index: 3;
+}
+
+.mv-hearts {
+  position: absolute;
+  left: 312px;
+  top: 195px;
+  width: 63px;
+  height: auto;
+  z-index: 3;
+}
+
+.mv-badges {
+  position: absolute;
+  left: 0;
+  top: 363px;
+  width: 375px;
+  height: 111px;
+  z-index: 4;
+}
+
+/* XD: circle r=55.5, fill rgba(253,249,245,0.8), 1px inside stroke rgb(254,197,136) */
+.mv-badge {
+  position: absolute;
+  top: 0;
+  width: 111px;
+  height: 111px;
+  border-radius: 50%;
+  background: rgba(253, 249, 245, 0.8);
+  border: 1px solid rgb(254, 197, 136);
+}
+
+.mv-badge-1 { left: 28px; }
+.mv-badge-2 { left: 133px; width: 110px; }
+.mv-badge-3 { left: 237px; width: 110px; }
+
+/* icon SVGs are drawn in the circle's own 111x111 coordinate space */
+.mv-badge img {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: 111px;
+  height: 111px;
+}
+
+.mv-badge p {
+  position: absolute;
+  left: -1px;
+  top: 57px;
+  width: 111px;
+  margin: 0;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.75px;
+  color: rgb(163, 100, 62);
+}
+
+.mv-badge-1 p { top: 60px; }
+
+.mv-badge .star { color: rgb(230, 90, 43); }
+
+/* XD exact: row1 baseline y=506.6, row2 y=539.6 (rows 23px tall at top 489/522);
+   bullet 6px at x=40; label x=51; pill 66x18 at x=203; price x=272/273;
+   dotted separators 303px wide at x=33, y=515/548 */
+.mv-prices {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 375px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 4;
+}
+
+.mv-prices li {
+  position: absolute;
+  left: 0;
+  width: 375px;
+  height: 23px;
+}
+
+.mv-prices .row1 { top: 489px; }
+.mv-prices .row2 { top: 522px; }
+
+.mv-prices li::before {
+  content: '';
+  position: absolute;
+  left: 40px;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgb(230, 100, 43);
+}
+
+.mv-prices li::after {
+  content: '';
+  position: absolute;
+  left: 33px;
+  top: 25px;
+  width: 303px;
+  height: 2px;
+  background: repeating-linear-gradient(90deg, #F9C99C 0 3px, transparent 3px 5.5px);
+  border-radius: 1px;
+}
+
+.mv-prices .label {
+  position: absolute;
+  left: 51px;
+  top: 0;
+  line-height: 23px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.75px;
+  color: var(--brown);
+  white-space: nowrap;
+}
+
+.mv-prices .label .accent { color: var(--orange); }
+
+.mv-pill {
+  position: absolute;
+  left: 203px;
+  top: 3px;
+  width: 66px;
+  height: 18px;
+  padding-right: 10px;
+  background: var(--pill);
+  color: var(--orange);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+  clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+  white-space: nowrap;
+}
+
+.mv-pill .pct { font-size: 13px; }
+
+.mv-prices .price {
+  position: absolute;
+  left: 272px;
+  top: 0;
+  line-height: 23px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.9px;
+  color: var(--brown);
+}
+
+.mv-prices .row2 .price { left: 273px; }
+
+.mv-cta {
+  position: absolute;
+  left: 24px;
+  top: 574px;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 325px;
+  height: 60px;
+  background: var(--orange);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 6px 14px rgba(230, 90, 43, 0.28);
+}
+
+/* XD: thin chevron near the right edge (button-local x=291, vertically centered) */
+.mv-cta svg {
+  position: absolute;
+  left: 291px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 9px;
+  height: 19px;
+}

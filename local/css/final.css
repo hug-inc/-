@@ -1,0 +1,162 @@
+/* ===== 最終CTA + footer =====
+   Canvas 10100..10998 → section-local = canvas - 10100, height 898. */
+.final {
+  position: relative;
+  height: 898px;
+  background: #FCFBF7;
+  overflow: hidden;
+}
+
+.final-bunting-l { position: absolute; left: 10px; top: 40px; width: 140px; }
+.final-bunting-r { position: absolute; left: 228px; top: 40px; width: 140px; }
+.final-crown     { position: absolute; left: 165px; top: 28px; width: 45px; }
+
+.final-lead {
+  position: absolute;
+  left: 0;
+  top: 69px;
+  width: 375px;
+  margin: 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 35px;
+  letter-spacing: 1.2px;
+  color: var(--brown);
+  z-index: 2;
+}
+
+.final-lead .price { color: var(--orange); }
+
+/* yellow marker under the third line */
+.final-lead-bar {
+  position: absolute;
+  left: 24px;
+  top: 166px;
+  width: 315px;
+  height: 8px;
+  background: rgb(255, 239, 172);
+  z-index: 1;
+}
+
+.final-sub {
+  position: absolute;
+  left: 0;
+  top: 198px;
+  width: 375px;
+  margin: 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 1.2px;
+  color: var(--brown);
+  z-index: 2;
+}
+
+.final-sub .brand { color: var(--orange); }
+
+.final-badges {
+  position: absolute;
+  left: 0;
+  top: 271px;
+  width: 375px;
+  height: 120px;
+}
+
+.final-badges img {
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 120px;
+}
+
+.final-badges img:nth-child(1) { left: 15px; }
+.final-badges img:nth-child(2) { left: 128px; }
+.final-badges img:nth-child(3) { left: 241px; }
+
+.final-cta {
+  position: absolute;
+  left: 24px;
+  top: 439px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 325px;
+  height: 60px;
+  background: var(--orange);
+  border-radius: 30px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+  box-shadow: 0 6px 14px rgba(230, 90, 43, 0.28);
+}
+
+.final-cta svg {
+  position: absolute;
+  left: 291px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 9px;
+  height: 19px;
+}
+
+/* footer: yellow hill with birds, links and copyright */
+.final-footer {
+  position: absolute;
+  left: 0;
+  top: 600px;
+  width: 375px;
+  height: 298px;
+}
+
+.final-footer .bg {
+  position: absolute;
+  inset: 0;
+  width: 375px;
+  height: 298px;
+}
+
+.final-footer .birds {
+  position: absolute;
+  left: 32px;
+  top: -48px;
+  width: 122px;
+}
+
+.final-footer nav {
+  position: absolute;
+  left: 0;
+  top: 143px;
+  width: 375px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.6px;
+  color: var(--brown);
+}
+
+.final-footer nav a {
+  color: var(--brown);
+  text-decoration: none;
+}
+
+.final-footer nav a:hover { text-decoration: underline; }
+
+.final-footer nav .divider { padding: 0 10px; }
+
+.final-footer .copy {
+  position: absolute;
+  left: 0;
+  top: 169px;
+  width: 375px;
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  color: var(--brown);
+}

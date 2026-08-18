@@ -1,0 +1,130 @@
+/* ===== ご利用の流れ section =====
+   Canvas 8629..9060 → section-local = canvas - 8629, height 431.
+   3 steps on a beige watercolor blob: white 93.7x160 cards at
+   x=15/140/266, 80px circles at y=150, numbered badges above. */
+.flow {
+  position: relative;
+  height: 431px;
+  background: #FCFBF7;
+  overflow: hidden;
+}
+
+.flow-bg {
+  position: absolute;
+  inset: 0;
+  width: 375px;
+  height: 431px;
+  z-index: 0;
+}
+
+.flow-heading {
+  position: absolute;
+  left: 0;
+  top: 78px;
+  width: 375px;
+  margin: 0;
+  text-align: center;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 1.15px;
+  color: var(--brown);
+  z-index: 2;
+}
+
+.flow-steps {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 2;
+}
+
+.flow-steps li {
+  position: absolute;
+  top: 145px;
+  width: 94px;
+}
+
+.flow-steps li:nth-child(1) { left: 15px; }
+.flow-steps li:nth-child(2) { left: 141px; }
+.flow-steps li:nth-child(3) { left: 266px; }
+
+/* white 80px circle holding the icon */
+.flow-steps .circle {
+  position: absolute;
+  left: 7px;
+  top: 5px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgb(253, 249, 244);
+}
+
+.flow-steps .icon {
+  position: absolute;
+  left: 23px;
+  top: 21px;
+  width: 48px;
+  height: 48px;
+}
+
+/* orange numbered badge (XD: 36px circle centred on the top-left of the ring) */
+.flow-steps .num {
+  position: absolute;
+  left: 29px;
+  top: -17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgb(253, 148, 75);
+  color: #fff;
+  font-size: 21px;
+  font-weight: 700;
+  z-index: 2;
+}
+
+.flow-steps .ttl {
+  position: absolute;
+  left: -8px;
+  top: 96px;
+  width: 110px;
+  margin: 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.9px;
+  color: var(--brown);
+}
+
+.flow-steps .txt {
+  position: absolute;
+  left: 0;
+  top: 125px;
+  width: 94px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.7px;
+  color: var(--brown);
+}
+
+/* step 3's title wraps to two lines, pushing its text down */
+.flow-steps li:nth-child(3) .txt { top: 147px; }
+
+.flow-arrow {
+  position: absolute;
+  top: 181px;
+  width: 40px;
+  height: auto;
+  z-index: 2;
+}
+
+.flow-arrow-1 { left: 110px; }
+.flow-arrow-2 { left: 236px; }

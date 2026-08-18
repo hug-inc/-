@@ -1,0 +1,48 @@
+/* ===== Desktop-only decoration, positioned relative to viewport center
+   using the same coordinate space as the original 1920px-wide canvas
+   (canvas center = 960px). offset = design_x - 960 ===== */
+
+.deco-hills-yellow {
+  left: calc(50% - 1638px);
+  top: 658px;
+  width: 3829px;
+}
+
+.deco-hills-mask {
+  left: calc(50% - 2013px);
+  top: 785px;
+  width: 4661px;
+}
+
+.deco-veggies {
+  left: calc(50% - 850px);
+  top: 875px;
+  width: 370px;
+}
+
+.deco-fairies {
+  left: calc(50% + 670px);
+  top: 625px;
+  width: 245px;
+}
+
+.deco-cloud-1 { left: calc(50% - 426px); top: 188px; width: 179px; }
+.deco-cloud-2 { left: calc(50% + 1083px); top: 120px; width: 179px; }
+.deco-cloud-3 { left: calc(50% - 87px); top: 647px; width: 179px; }
+.deco-cloud-4 { left: calc(50% + 1267px); top: 278px; width: 116px; }
+.deco-cloud-5 { left: calc(50% - 476px); top: 499px; width: 116px; }
+.deco-cloud-6 { left: calc(50% + 61px); top: 198px; width: 116px; }
+
+.deco-bird-1 { left: calc(50% + 860px); top: 141px; width: 39px; }
+.deco-bird-2 { left: calc(50% + 795px); top: 119px; width: 39px; }
+
+.deco-logo {
+  left: calc(50% - 763px);
+  top: 405px;
+  width: 310px;
+}
+
+.desktop-nav {
+  left: calc(50% + 318px);
+  top: 306px;
+}

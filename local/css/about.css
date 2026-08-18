@@ -1,0 +1,108 @@
+/* ===== 「てでもぐ」は、手づかみ食べのために生まれました。 section =====
+   Canvas 2039..2902 → section-local = canvas - 2039, height 863.
+   (栄養士コメント section 1699..2039 is currently hidden by request.) */
+.about {
+  position: relative;
+  height: 863px;
+  background: #FCFBF7;
+  overflow: hidden;
+}
+
+.about-hero {
+  position: absolute;
+  left: 0;
+  top: 21px;
+  width: 375px;
+  height: 385px;
+}
+
+.about-heading {
+  position: absolute;
+  left: 0;
+  top: 409px;
+  width: 375px;
+  margin: 0;
+  text-align: center;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 1.15px;
+  color: var(--brown);
+  z-index: 2;
+}
+
+.about-heading .accent { color: var(--orange); }
+
+/* yellow marker bars sitting on each line's baseline */
+.about-bars i {
+  position: absolute;
+  height: 8px;
+  background: rgb(255, 239, 172);
+  z-index: 1;
+}
+
+.about-bars i:nth-child(1) { left: 105px; top: 434px; width: 166px; }
+.about-bars i:nth-child(2) { left: 61px; top: 467px; width: 247px; }
+.about-bars i:nth-child(3) { left: 99px; top: 500px; width: 162px; }
+
+.about-body {
+  position: absolute;
+  left: 32px;
+  top: 523px;
+  width: 313px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0.75px;
+  color: var(--brown);
+}
+
+.about-list {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-list li { position: absolute; left: 0; width: 375px; }
+
+.about-list li:nth-child(1) { top: 604px; }
+.about-list li:nth-child(2) { top: 646px; }
+.about-list li:nth-child(3) { top: 688px; }
+.about-list li:nth-child(4) { top: 730px; }
+
+.about-list img {
+  position: absolute;
+  left: 47px;
+  top: -2px;
+  width: 32px;
+  height: 32px;
+}
+
+.about-list p {
+  margin: 0;
+  padding-left: 85px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0.75px;
+  color: var(--brown);
+}
+
+/* dotted separators (same style as MV price rows) */
+.about-sep {
+  position: absolute;
+  left: 32px;
+  width: 313px;
+  height: 2px;
+  background: repeating-linear-gradient(90deg, #F9C99C 0 3px, transparent 3px 5.5px);
+  border-radius: 1px;
+}
+
+.about-sep:nth-of-type(1) { top: 593px; }
+.about-sep:nth-of-type(2) { top: 635px; }
+.about-sep:nth-of-type(3) { top: 676px; }
+.about-sep:nth-of-type(4) { top: 718px; }
+.about-sep:nth-of-type(5) { top: 781px; }

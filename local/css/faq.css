@@ -1,0 +1,155 @@
+/* ===== よくある質問 section =====
+   Canvas 9060..10100 → section-local = canvas - 9060, height 1040.
+   Each item is a <details> so it works as a real accordion; the XD
+   comp shows every item open, which is the default state here. */
+.faq {
+  position: relative;
+  height: 1040px;
+  background: #FCFBF7;
+}
+
+.faq-heading {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 375px;
+  margin: 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 1.2px;
+  color: var(--brown);
+}
+
+.faq-list {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 375px;
+}
+
+.faq-list details {
+  position: absolute;
+  left: 15px;
+  width: 345px;
+}
+
+/* XD tops (canvas): 9143 / 9335 / 9506 / 9689 / 9881 */
+.faq-list details:nth-of-type(1) { top: 83px; }
+.faq-list details:nth-of-type(2) { top: 275px; }
+.faq-list details:nth-of-type(3) { top: 446px; }
+.faq-list details:nth-of-type(4) { top: 629px; }
+.faq-list details:nth-of-type(5) { top: 821px; }
+
+.faq-list summary {
+  position: relative;
+  min-height: 44px;
+  padding: 0 60px 0 50px;
+  list-style: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: 0.9px;
+  color: var(--brown);
+}
+
+.faq-list summary::-webkit-details-marker { display: none; }
+
+/* orange speech-bubble "Q" badge */
+.faq-list summary::before {
+  content: 'Q';
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50% 50% 50% 4px;
+  background: rgb(253, 148, 75);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* +/− toggle on the right */
+.faq-list summary::after {
+  content: '';
+  position: absolute;
+  right: 4px;
+  top: 14px;
+  width: 14px;
+  height: 3px;
+  background: rgb(253, 148, 75);
+  border-radius: 1px;
+}
+
+.faq-list summary .plus {
+  position: absolute;
+  right: 9.5px;
+  top: 8.5px;
+  width: 3px;
+  height: 14px;
+  background: rgb(253, 148, 75);
+  border-radius: 1px;
+  transition: opacity .15s;
+}
+
+.faq-list details[open] summary .plus { opacity: 0; }
+
+.faq-list .answer {
+  position: relative;
+  margin: 0;
+  padding: 14px 25px 0 50px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0.7px;
+  color: var(--brown);
+}
+
+/* outlined speech-bubble "A" badge */
+.faq-list .answer::before {
+  content: 'A';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50% 50% 50% 4px;
+  border: 1.5px solid rgb(253, 148, 75);
+  background: #fff;
+  color: rgb(253, 148, 75);
+  font-size: 19px;
+  font-weight: 700;
+}
+
+/* hairlines above each item and below the last one */
+.faq-sep {
+  position: absolute;
+  left: 15px;
+  width: 345px;
+  height: 1px;
+  background: rgb(229, 217, 193);
+}
+
+.faq-more {
+  position: absolute;
+  left: 0;
+  top: 985px;
+  width: 375px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0.7px;
+  color: var(--brown);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}

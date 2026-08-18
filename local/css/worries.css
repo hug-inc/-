@@ -1,0 +1,107 @@
+/* ===== "こんなお悩みありませんか?" section ===== */
+/* Canvas 668..1243 → section-local = canvas - 668, height 575 */
+.worries {
+  position: relative;
+  height: 575px;
+  background: #fbeee0;
+  overflow: hidden;
+}
+
+/* XD: AdobeStock texture drawn at canvas (678,620) 1186x642 → local (-95,-48) */
+.worries-bg {
+  position: absolute;
+  left: -95px;
+  top: -48px;
+  width: 1186px;
+  height: 642px;
+  z-index: 0;
+}
+
+/* XD clip box: local (44.8, 14.7) 287x139 */
+.worries-bubble {
+  position: absolute;
+  left: 45px;
+  top: 15px;
+  width: 287px;
+  height: 139px;
+  z-index: 1;
+}
+
+.worries-bubble path {
+  fill: rgba(255, 255, 255, 0.92);
+}
+
+.worries-heading {
+  position: absolute;
+  left: 39px;
+  top: 51px;
+  width: 300px;
+  z-index: 2;
+  margin: 0;
+  text-align: center;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 35px;
+  letter-spacing: 1.35px;
+  color: var(--brown);
+}
+
+.worries-parents {
+  position: absolute;
+  left: 207px;
+  top: 127px;
+  width: 137px;
+  height: auto;
+  z-index: 2;
+}
+
+.worries-list {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* XD: checkmark box 21px at x=40, text left at x=64 */
+.worries-list li {
+  position: absolute;
+  left: 40px;
+  width: 300px;
+  display: flex;
+  gap: 3px;
+}
+
+.worries-list li:nth-child(1) { top: 170px; }
+.worries-list li:nth-child(2) { top: 264px; }
+.worries-list li:nth-child(3) { top: 331px; }
+.worries-list li:nth-child(4) { top: 371px; }
+.worries-list li:nth-child(5) { top: 438px; }
+.worries-list li:nth-child(6) { top: 505px; }
+
+.worries-list img {
+  width: 21px;
+  height: 21px;
+  margin-top: 6px;
+  flex: none;
+}
+
+.worries-list p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 27px;
+  color: var(--brown);
+}
+
+.worries-list p .accent { color: var(--orange); }
+
+.worries-wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 32px;
+  z-index: 1;
+}

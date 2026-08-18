@@ -1,0 +1,137 @@
+/* ===== 商品ラインナップ&価格 section =====
+   Canvas 4803..5966 → section-local = canvas - 4803, height 1163.
+   Product cards are a 2-column grid: x=15 / x=200, 160px wide,
+   rows every 259px starting at local y=117.
+   Card markup is Shopify-ready: one <li class="product"> per item,
+   with data-handle carrying the Shopify product handle. */
+.lineup {
+  position: relative;
+  height: 1163px;
+  background: #FCFBF7;
+}
+
+.lineup-heading {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 375px;
+  margin: 0;
+  text-align: center;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 1.15px;
+  color: var(--brown);
+}
+
+.lineup-lead {
+  position: absolute;
+  left: 15px;
+  top: 61px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 26px;
+  color: rgb(64, 50, 13);
+}
+
+.lineup-grid {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lineup-grid .product {
+  position: absolute;
+  width: 160px;
+}
+
+/* columns / rows */
+.lineup-grid .product:nth-child(odd)  { left: 15px; }
+.lineup-grid .product:nth-child(even) { left: 200px; }
+.lineup-grid .product:nth-child(1),
+.lineup-grid .product:nth-child(2) { top: 117px; }
+.lineup-grid .product:nth-child(3),
+.lineup-grid .product:nth-child(4) { top: 376px; }
+.lineup-grid .product:nth-child(5),
+.lineup-grid .product:nth-child(6) { top: 635px; }
+.lineup-grid .product:nth-child(7) { top: 894px; }
+
+/* age tag: flag shape notched on the right (XD: 91x22 at card top) */
+.lineup-grid .age {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 34px 0 8px;
+  background: rgb(255, 186, 105);
+  color: rgb(64, 50, 13);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 22px;
+  white-space: nowrap;
+  clip-path: polygon(0 0, 100% 0, 88% 50%, 100% 100%, 0 100%);
+}
+
+.lineup-grid .age.is-9m { background: rgb(255, 216, 51); }
+.lineup-grid .age .m { font-size: 14px; }
+
+.lineup-grid .thumb {
+  position: absolute;
+  left: 0;
+  top: 13.5px;
+  width: 160px;
+  height: 140px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.lineup-grid .name {
+  position: absolute;
+  left: 0;
+  top: 161px;
+  width: 160px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+  color: rgb(64, 50, 13);
+}
+
+.lineup-grid .price {
+  position: absolute;
+  left: 0;
+  top: 203px;
+  width: 160px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  color: rgb(64, 50, 13);
+  white-space: nowrap;
+}
+
+.lineup-grid .price .tilde { font-size: 11px; padding: 0 4px 0 8px; }
+.lineup-grid .price .tax { font-size: 10px; }
+
+.lineup-grid .product::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 232px;
+  width: 159px;
+  height: 1px;
+  background: #ddd;
+}
+
+.lineup-fairies {
+  position: absolute;
+  left: 225px;
+  top: 987px;
+  width: 120px;
+}

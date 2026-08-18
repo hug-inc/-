@@ -1,0 +1,82 @@
+/* ===== "実は、手づかみ食べは…大切です。" section =====
+   Canvas 1243..1699 → section-local = canvas - 1243, height 456.
+   Card centers x=73/188/303; label baselines 1504 (row1), 1639/1643.6 (row2). */
+.importance {
+  position: relative;
+  height: 456px;
+  background: #FCFBF7;
+  overflow: hidden;
+}
+
+.importance-heading {
+  position: absolute;
+  left: 0;
+  top: 32px;
+  width: 375px;
+  margin: 0;
+  text-align: center;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 1.15px;
+  color: var(--brown);
+}
+
+.importance-spark-l {
+  position: absolute;
+  left: 10px;
+  top: 37px;
+  width: 45px;
+  height: auto;
+}
+
+.importance-spark-r {
+  position: absolute;
+  left: 318px;
+  top: 37px;
+  width: 46px;
+  height: auto;
+}
+
+.importance-cards {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.importance-cards li { position: absolute; }
+
+.importance-cards img { display: block; }
+
+/* row 1 (canvas 1383 → local 140) */
+.imp-card-1 { left: 11px; top: 140px; }
+.imp-card-2 { left: 126px; top: 140px; }
+.imp-card-3 { left: 241px; top: 140px; }
+.imp-card-1 img, .imp-card-2 img, .imp-card-3 img { width: 124px; height: 105px; }
+
+/* row 2 (canvas 1528 → local 285) */
+.imp-card-4 { left: 11px; top: 285px; }
+.imp-card-5 { left: 126px; top: 285px; }
+.imp-card-6 { left: 238px; top: 285px; }
+.imp-card-4 img, .imp-card-5 img { width: 124px; height: 95px; }
+.imp-card-6 img { width: 134px; height: 100px; }
+
+.importance-cards p {
+  position: absolute;
+  width: 124px;
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0.75px;
+  color: rgb(163, 100, 62);
+}
+
+/* label tops: row1 canvas 1488.4 → local 245.4 (li top 140 → p top 105.4);
+   row2 canvas 1623.4 → local 380.4 (li top 285 → p top 95.4); card6 +4.6px */
+.imp-card-1 p, .imp-card-2 p, .imp-card-3 p { left: 0; top: 105px; }
+.imp-card-4 p, .imp-card-5 p { left: 0; top: 95px; }
+.imp-card-6 p { left: 5px; top: 100px; letter-spacing: 0; }

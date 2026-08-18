@@ -1,0 +1,100 @@
+/* ===== 他社との違い section =====
+   Canvas 3825..4240 → section-local = canvas - 3825, height 415. */
+.compare {
+  position: relative;
+  height: 415px;
+  background: #FCFBF7;
+}
+
+.compare-heading {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 375px;
+  margin: 0;
+  text-align: center;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 1.15px;
+  color: var(--brown);
+}
+
+.compare-leaf-l { position: absolute; left: 47px; top: -5px; width: 58px; }
+.compare-leaf-r { position: absolute; left: 277px; top: -5px; width: 50px; }
+
+.compare-table {
+  position: absolute;
+  inset: 0;
+  font-weight: 700;
+  color: var(--brown);
+}
+
+.compare-table .cell {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.7px;
+}
+
+/* column x (local): labels 15, てでもぐ 102, A社 188, C社 274 */
+/* header row */
+.compare-table .h-tedemogu {
+  left: 102px; top: 58px; width: 84px; height: 52px;
+  background: rgb(253, 148, 75);
+  border-radius: 10px 10px 0 0;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: -0.8px;
+}
+
+.compare-table .h-a, .compare-table .h-c {
+  top: 70px; width: 84px; height: 40px;
+  background: rgba(96, 68, 57, 0.2);
+  border-radius: 10px 10px 0 0;
+  font-size: 12px;
+  line-height: 15px;
+  white-space: nowrap;
+}
+
+.compare-table .h-a { left: 188px; letter-spacing: -1.2px; }
+.compare-table .h-c { left: 274px; letter-spacing: 0.6px; }
+
+/* row label cells */
+.compare-table .lbl {
+  left: 15px; width: 85px; height: 48px;
+  background: rgb(147, 88, 53);
+  border-radius: 10px 0 0 10px;
+  color: #fff;
+  justify-content: flex-start;
+  text-align: left;
+  padding-left: 14px;
+}
+
+/* data cells */
+.compare-table .c-t { left: 102px; width: 84px; height: 48px; background: rgb(255, 245, 180); }
+.compare-table .c-a { left: 188px; width: 84px; height: 48px; background: rgb(250, 244, 231); }
+.compare-table .c-c { left: 274px; width: 84px; height: 48px; background: rgb(250, 244, 231); }
+
+/* row tops (local): 112 / 162 / 212 / 262 / 312 */
+.compare-table .r1 { top: 112px; }
+.compare-table .r2 { top: 162px; }
+.compare-table .r3 { top: 212px; }
+.compare-table .r4 { top: 262px; }
+.compare-table .r5 { top: 312px; }
+
+/* orange outline around the てでもぐ column (XD: 84x248 at (102,112), 3px stroke) */
+.compare-outline {
+  position: absolute;
+  left: 100.5px;
+  top: 110.5px;
+  width: 87px;
+  height: 251px;
+  border: 3px solid rgb(253, 148, 75);
+  border-radius: 2px;
+  pointer-events: none;
+}

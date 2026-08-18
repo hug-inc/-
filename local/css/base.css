@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap');
+
+:root {
+  --lp-w: 375px;
+  --canvas-w: 1920px;
+  --canvas-center: 960px;
+  --brown: #604539;
+  --brown-deep: #5B3E36;
+  --brown-soft: #A3643E;
+  --orange: #E65A2B;
+  --pill: #FDD180;
+  --cream: #FBF7F1;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: var(--brown);
+  font-family: 'Zen Maru Gothic', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: none; display: block; }
+
+.page {
+  position: relative;
+  width: 100%;
+  overflow-x: clip;
+}
+
+.lp {
+  position: relative;
+  width: 100%;
+  max-width: var(--lp-w);
+  margin: 0 auto;
+  background: #fff;
+  z-index: 2;
+}
+
+/* Desktop-only decorative layer, positioned relative to the same
+   1920px design canvas center that the mobile column is centered on. */
+.desktop-deco {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  display: none;
+}
+
+@media (min-width: 1180px) {
+  .desktop-deco { display: block; }
+}
+
+.deco-item {
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+
+.desktop-nav {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  pointer-events: auto;
+}
+
+.desktop-nav a {
+  color: var(--brown);
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 11px 0;
+  white-space: nowrap;
+}
+
+.desktop-nav a:hover { color: var(--orange); }

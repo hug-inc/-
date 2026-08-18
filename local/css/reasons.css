@@ -1,0 +1,146 @@
+/* ===== 選ばれる理由 section =====
+   Canvas 2902..3825 → section-local = canvas - 2902, height 923.
+   The wavy top edge rises to canvas 2865, so the bg wrapper extends
+   32px above the section box (origin 2860, height 965). */
+.reasons {
+  position: relative;
+  height: 923px;
+  z-index: 1;
+}
+
+.reasons-bg {
+  position: absolute;
+  left: 0;
+  top: -42px;
+  width: 375px;
+  height: 965px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.reasons-bg-base {
+  position: absolute;
+  inset: 0;
+  width: 375px;
+  height: 965px;
+}
+
+/* XD repeat grid: tile 470x530 at canvas (718,2814) → wrapper-local (-55,-46) */
+.reasons-bg-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/reasons/bg-pattern.png');
+  background-size: 470px 530px;
+  background-position: -55px -46px;
+  background-repeat: repeat;
+}
+
+.reasons-wave {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.reasons-blobs {
+  position: absolute;
+  inset: 0;
+  width: 375px;
+  height: 923px;
+  z-index: 1;
+}
+
+.reasons-heading {
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 375px;
+  margin: 0;
+  text-align: center;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 1.15px;
+  color: var(--brown);
+  z-index: 3;
+}
+
+.reasons-heading-bar {
+  position: absolute;
+  left: 105px;
+  top: 25px;
+  width: 162px;
+  height: 8px;
+  background: rgb(255, 239, 172);
+  z-index: 2;
+}
+
+/* decorative veggie characters with balloons (cropped 1:1 from reference) */
+.reasons-deco { position: absolute; z-index: 1; }
+.deco-r-carrot { left: 280px; top: -17px; width: 95px; }
+.deco-r-broccoli { left: 0; top: 433px; width: 105px; }
+.deco-r-onion { left: 270px; top: 553px; width: 82px; }
+.deco-r-potato { left: 5px; top: 753px; width: 110px; }
+
+/* cards */
+.reasons-cards {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 2;
+}
+
+.reasons-cards li { position: absolute; left: 0; top: 0; width: 0; height: 0; }
+
+.reasons-cards .num {
+  position: absolute;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 19px;
+  color: rgb(253, 148, 75);
+}
+
+.reasons-cards .ttl {
+  position: absolute;
+  width: 180px;
+  margin: 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: rgb(64, 50, 13);
+}
+
+/* photos are cropped 1:1 from the reference (rotation baked in) */
+.reasons-cards .ph { position: absolute; }
+
+/* per-card coordinates (section-local) */
+.r-card-1 .num { left: 94px; top: 67px; }
+.r-card-1 .ttl { left: 17px; top: 95px; }
+.r-card-1 .ph  { left: 44.6px; top: 142.1px; width: 123.8px; }
+
+.r-card-2 .num { left: 267px; top: 119px; }
+.r-card-2 .ttl { left: 190px; top: 146px; }
+.r-card-2 .ph  { left: 214.7px; top: 196.4px; width: 121.4px; }
+
+.r-card-3 .num { left: 94px; top: 266px; }
+.r-card-3 .ttl { left: 17px; top: 293px; }
+.r-card-3 .ph  { left: 43.8px; top: 344.4px; width: 121.4px; }
+
+.r-card-4 .num { left: 264px; top: 311px; }
+.r-card-4 .ttl { left: 188px; top: 339px; }
+.r-card-4 .ph  { left: 233px; top: 378px; width: 90px; }
+
+.r-card-5 .num { left: 165px; top: 441px; }
+.r-card-5 .ttl { left: 88px; top: 468px; }
+.r-card-5 .ph  { left: 116.6px; top: 519.4px; width: 123.8px; }
+
+.r-card-6 .num { left: 112px; top: 630px; }
+.r-card-6 .ttl { left: 35px; top: 657px; }
+.r-card-6 .ph  { left: 59.4px; top: 707.2px; width: 121.4px; }
+
+.r-card-7 .num { left: 266px; top: 710px; }
+.r-card-7 .ttl { left: 189px; top: 738px; }
+.r-card-7 .ph  { left: 218.3px; top: 767.1px; width: 121.4px; }
