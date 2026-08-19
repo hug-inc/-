@@ -1,19 +1,16 @@
 /* ===== よくある質問 section =====
-   Canvas 9060..10100 → section-local = canvas - 9060, height 1040.
-   Each item is a <details> so it works as a real accordion; the XD
-   comp shows every item open, which is the default state here. */
+   A real accordion: the first item is open, the rest open on click.
+   Laid out in normal flow (not absolutely positioned) so the section
+   reflows as items open and close. Spacing reproduces the XD rhythm —
+   hairline, 28px, question, answer, 32px, next hairline. */
 .faq {
   position: relative;
-  height: 1040px;
+  padding: 8px 0 34px;
   background: #FCFBF7;
 }
 
 .faq-heading {
-  position: absolute;
-  left: 0;
-  top: 8px;
-  width: 375px;
-  margin: 0;
+  margin: 0 0 18px;
   text-align: center;
   font-size: 24px;
   font-weight: 700;
@@ -22,25 +19,15 @@
   color: var(--brown);
 }
 
-.faq-list {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 375px;
-}
+.faq-list { margin: 0 15px; }
 
 .faq-list details {
-  position: absolute;
-  left: 15px;
-  width: 345px;
+  border-top: 1px solid rgb(229, 217, 193);
+  padding: 28px 0 32px;
 }
 
-/* XD tops (canvas): 9143 / 9335 / 9506 / 9689 / 9881 */
-.faq-list details:nth-of-type(1) { top: 83px; }
-.faq-list details:nth-of-type(2) { top: 275px; }
-.faq-list details:nth-of-type(3) { top: 446px; }
-.faq-list details:nth-of-type(4) { top: 629px; }
-.faq-list details:nth-of-type(5) { top: 821px; }
+.faq-list details:first-of-type { padding-top: 24px; }
+.faq-list details:last-of-type { border-bottom: 1px solid rgb(229, 217, 193); }
 
 .faq-list summary {
   position: relative;
@@ -130,20 +117,9 @@
   font-weight: 700;
 }
 
-/* hairlines above each item and below the last one */
-.faq-sep {
-  position: absolute;
-  left: 15px;
-  width: 345px;
-  height: 1px;
-  background: rgb(229, 217, 193);
-}
-
 .faq-more {
-  position: absolute;
-  left: 0;
-  top: 985px;
-  width: 375px;
+  display: block;
+  margin-top: 31px;
   text-align: center;
   font-size: 14px;
   font-weight: 500;
