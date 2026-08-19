@@ -23,6 +23,14 @@ html, body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* In-page links (desktop nav + the CTAs) glide to their section
+   instead of jumping. Honour the OS "reduce motion" setting. */
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
 img { max-width: none; display: block; }
 
 .page {
