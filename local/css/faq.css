@@ -87,8 +87,13 @@
 
 .faq-list details[open] summary .plus { opacity: 0; }
 
+/* while the answer slides shut the item is still [open], so bring the
+   + back straight away rather than waiting for the animation to end */
+.faq-list details.is-closing summary .plus { opacity: 1; }
+
 .faq-list .answer {
   position: relative;
+  overflow: hidden;     /* clips the answer as js animates its height */
   margin: 0;
   padding: 14px 25px 0 50px;
   font-size: 14px;
