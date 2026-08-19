@@ -1,48 +1,66 @@
-/* ===== Desktop-only decoration, positioned relative to viewport center
-   using the same coordinate space as the original 1920px-wide canvas
-   (canvas center = 960px). offset = design_x - 960 ===== */
+/* ===== Desktop-only decoration =====
+   Horizontal placement keeps the original 1920px canvas mapping
+   (offset = design_x - 960, canvas centre = 960px).
 
+   Vertically the layer is pinned to the viewport (.desktop-deco is
+   position:fixed), so the artwork behaves like a fixed backdrop while
+   the 375px column scrolls over it. Ground pieces (hills, veggies,
+   fairies) are anchored to the bottom edge and sky pieces to the top,
+   so the scene still reads correctly at any window height. The offsets
+   below reproduce the comp exactly at a 1080px-tall viewport. */
+
+/* --- ground: anchored to the bottom of the viewport --- */
 .deco-hills-yellow {
   left: calc(50% - 1638px);
-  top: 658px;
+  bottom: -382px;          /* design top 658 + height 804 */
   width: 3829px;
 }
 
 .deco-hills-mask {
   left: calc(50% - 2013px);
-  top: 785px;
+  bottom: -564px;          /* design top 785 + height 859 */
   width: 4661px;
 }
 
+/* Side pieces are clamped so they stay on screen below 1920px, where the
+   raw canvas mapping would push them past the window edge. At 1920px the
+   clamp is inactive and the placement matches the comp exactly. */
 .deco-veggies {
-  left: calc(50% - 850px);
-  top: 875px;
+  left: max(16px, calc(50% - 850px));
+  bottom: 50px;            /* design top 875 + height 155 */
   width: 370px;
 }
 
 .deco-fairies {
-  left: calc(50% + 670px);
-  top: 625px;
+  right: max(20px, calc(50% - 915px));
+  bottom: 245px;           /* design top 625 + height 210 */
   width: 245px;
 }
 
+.deco-cloud-3 {            /* the low cloud that hugs the hills */
+  left: calc(50% - 87px);
+  bottom: 336px;
+  width: 179px;
+}
+
+/* --- sky: anchored to the top of the viewport --- */
 .deco-cloud-1 { left: calc(50% - 426px); top: 188px; width: 179px; }
 .deco-cloud-2 { left: calc(50% + 1083px); top: 120px; width: 179px; }
-.deco-cloud-3 { left: calc(50% - 87px); top: 647px; width: 179px; }
 .deco-cloud-4 { left: calc(50% + 1267px); top: 278px; width: 116px; }
 .deco-cloud-5 { left: calc(50% - 476px); top: 499px; width: 116px; }
 .deco-cloud-6 { left: calc(50% + 61px); top: 198px; width: 116px; }
 
-.deco-bird-1 { left: calc(50% + 860px); top: 141px; width: 39px; }
-.deco-bird-2 { left: calc(50% + 795px); top: 119px; width: 39px; }
+.deco-bird-1 { right: max(30px, calc(50% - 899px)); top: 141px; width: 39px; }
+.deco-bird-2 { right: max(70px, calc(50% - 834px)); top: 119px; width: 39px; }
 
+/* --- logo & nav: held around the vertical middle --- */
 .deco-logo {
-  left: calc(50% - 763px);
-  top: 405px;
+  left: max(24px, calc(50% - 763px));
+  top: calc(50% - 135px);  /* design top 405 at a 1080px viewport */
   width: 310px;
 }
 
 .desktop-nav {
   left: calc(50% + 318px);
-  top: 306px;
+  top: calc(50% - 234px);  /* design top 306 at a 1080px viewport */
 }

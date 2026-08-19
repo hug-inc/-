@@ -40,10 +40,17 @@ img { max-width: none; display: block; }
   z-index: 2;
 }
 
-/* Desktop-only decorative layer, positioned relative to the same
-   1920px design canvas center that the mobile column is centered on. */
+/* Phones: the comp is a fixed 375px grid, so scale the whole column to
+   the viewport instead of leaving gutters on wider handsets. `zoom`
+   (unlike `transform`) still affects layout, so the page height follows. */
+@media (max-width: 767px) {
+  .lp { zoom: calc(100vw / var(--lp-w)); }
+}
+
+/* Desktop-only decorative layer. Pinned to the viewport so the artwork
+   stays put while the centre column scrolls over it. */
 .desktop-deco {
-  position: absolute;
+  position: fixed;
   inset: 0;
   z-index: 1;
   pointer-events: none;
@@ -54,10 +61,11 @@ img { max-width: none; display: block; }
   .desktop-deco { display: block; }
 }
 
+/* Each deco item sets its own top/bottom and left/right in desktop-deco.css.
+   No defaults here: a default top/left would win over a bottom/right in the
+   over-constrained case and silently ignore the anchoring. */
 .deco-item {
   position: absolute;
-  top: 0;
-  left: 50%;
 }
 
 .desktop-nav {
