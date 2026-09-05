@@ -190,9 +190,7 @@
 
 .set-card:nth-of-type(2) .name { line-height: 28px; }
 .set-card:nth-of-type(2) .desc { top: 114px; }
-.set-card:nth-of-type(2) .off  { top: 168px; }
-.set-card:nth-of-type(2) .was  { top: 193px; }
-.set-card:nth-of-type(2) .now  { top: 188px; }
+.set-card:nth-of-type(2) .now  { top: 175px; }
 
 .set-card:nth-of-type(3) .name,
 .set-card:nth-of-type(4) .name { top: 31px; }

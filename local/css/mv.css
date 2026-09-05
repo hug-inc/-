@@ -186,8 +186,7 @@
   height: 23px;
 }
 
-.mv-prices .row1 { top: 489px; }
-.mv-prices .row2 { top: 522px; }
+.mv-prices .row2 { top: 505px; }
 
 .mv-prices li::before {
   content: '';
