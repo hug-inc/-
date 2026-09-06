@@ -6,7 +6,7 @@
    with data-handle carrying the Shopify product handle. */
 .lineup {
   position: relative;
-  height: 1163px;
+  height: 1409px;
   background: #FCFBF7;
 }
 
@@ -54,10 +54,10 @@
 .lineup-grid .product:nth-child(1),
 .lineup-grid .product:nth-child(2) { top: 117px; }
 .lineup-grid .product:nth-child(3),
-.lineup-grid .product:nth-child(4) { top: 376px; }
+.lineup-grid .product:nth-child(4) { top: 438px; }
 .lineup-grid .product:nth-child(5),
-.lineup-grid .product:nth-child(6) { top: 635px; }
-.lineup-grid .product:nth-child(7) { top: 894px; }
+.lineup-grid .product:nth-child(6) { top: 759px; }
+.lineup-grid .product:nth-child(7) { top: 1080px; }
 
 /* age tag: flag shape notched on the right (XD: 91x22 at card top) */
 .lineup-grid .age {
@@ -103,27 +103,47 @@
   color: rgb(64, 50, 13);
 }
 
-.lineup-grid .price {
+.lineup-grid .tiers {
   position: absolute;
   left: 0;
   top: 203px;
   width: 160px;
   margin: 0;
-  font-size: 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.lineup-grid .tier { margin: 0; }
+.lineup-grid .tier.is-set { margin-top: 4px; }
+
+.lineup-grid .tier .row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px;
+  font-size: 13px;
   font-weight: 700;
-  line-height: 22px;
+  line-height: 16px;
   color: rgb(64, 50, 13);
   white-space: nowrap;
 }
 
-.lineup-grid .price .tilde { font-size: 11px; padding: 0 4px 0 8px; }
-.lineup-grid .price .tax { font-size: 10px; }
+.lineup-grid .tier .amt .tax { font-size: 9px; font-weight: 700; padding-left: 2px; }
+
+.lineup-grid .tier .unit {
+  margin: 1px 0 0;
+  text-align: right;
+  font-size: 9px;
+  font-weight: 500;
+  color: rgb(163, 100, 62);
+  line-height: 13px;
+}
 
 .lineup-grid .product::after {
   content: '';
   position: absolute;
   left: 0;
-  top: 232px;
+  top: 293px;
   width: 159px;
   height: 1px;
   background: #ddd;
@@ -132,6 +152,6 @@
 .lineup-fairies {
   position: absolute;
   left: 225px;
-  top: 987px;
+  top: 1173px;
   width: 120px;
 }
