@@ -184,7 +184,11 @@
 
 /* per-card vertical rhythm (offsets inside each card) */
 .set-card:nth-of-type(1) .desc { top: 86px; }
-.set-card:nth-of-type(1) .off  { top: 140px; }
+.set-card:nth-of-type(1) .off  {
+  top: 140px;
+  font-size: 11px;
+  padding: 0 6px;
+}
 .set-card:nth-of-type(1) .was  { top: 165px; }
 .set-card:nth-of-type(1) .now  { top: 160px; }
 
