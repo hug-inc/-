@@ -1,0 +1,62 @@
+/* ===== 追尾CTA（下部固定ボタン） =====
+   Sits outside .lp (a sibling of it) so the mobile `zoom` scaling on
+   .lp never touches it — it stays true fixed-to-viewport at all sizes.
+   Hidden until the hero's 全種セット card has scrolled past (see
+   js/sticky-cta.js), then slides up from the bottom. */
+.sticky-cta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  padding: 10px 15px calc(10px + env(safe-area-inset-bottom, 0px));
+  background: rgba(255, 253, 250, 0.96);
+  box-shadow: 0 -4px 16px rgba(64, 50, 13, 0.12);
+  transform: translateY(100%);
+  transition: transform 0.25s ease;
+  pointer-events: none;
+}
+
+.sticky-cta.is-visible {
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.sticky-cta a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 345px;
+  height: 60px;
+  background: var(--orange);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 6px 14px rgba(230, 90, 43, 0.28);
+}
+
+.sticky-cta .badge {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 22px;
+  padding: 0 8px;
+  background: #fff;
+  color: var(--orange);
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.sticky-cta .text {
+  white-space: nowrap;
+}

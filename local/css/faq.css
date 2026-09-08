@@ -122,15 +122,3 @@
   font-weight: 700;
 }
 
-.faq-more {
-  display: block;
-  margin-top: 31px;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 21px;
-  letter-spacing: 0.7px;
-  color: var(--brown);
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
