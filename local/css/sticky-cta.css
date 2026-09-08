@@ -60,3 +60,9 @@
 .sticky-cta .text {
   white-space: nowrap;
 }
+
+.sticky-cta .arrow {
+  flex: none;
+  width: 7px;
+  height: 15px;
+}
