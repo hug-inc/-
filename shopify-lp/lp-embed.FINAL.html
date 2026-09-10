@@ -1,0 +1,2022 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap');
+:root{--lp-w:375px;--canvas-w:1920px;--canvas-center:960px;--brown:#604539;--brown-deep:#5B3E36;--brown-soft:#A3643E;--orange:#E65A2B;--pill:#FDD180;--cream:#FBF7F1;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}}
+.tdmg-lp,.tdmg-lp *{box-sizing:border-box;}
+.tdmg-lp{color:var(--brown);font-family:'Zen Maru Gothic',sans-serif;-webkit-font-smoothing:antialiased;}
+.tdmg-lp img{max-width:none;display:block;}
+
+.tdmg-lp, .tdmg-lp * {box-sizing: border-box;}
+.tdmg-lp img {max-width: none; display: block;}
+.tdmg-lp .page {position: relative;
+  width: 100%;
+  overflow-x: clip;}
+.tdmg-lp .lp {position: relative;
+  width: 100%;
+  max-width: var(--lp-w);
+  margin: 0 auto;
+  background: #fff;
+  z-index: 2;}
+@media (max-width: 767px) {
+.tdmg-lp .lp {zoom: calc(100vw / var(--lp-w));}
+}
+.tdmg-lp .desktop-deco {position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  display: none;}
+@media (min-width: 1180px) {
+.tdmg-lp .desktop-deco {display: block;}
+}
+.tdmg-lp .deco-item {position: absolute;}
+.tdmg-lp .desktop-nav {position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  pointer-events: auto;}
+.tdmg-lp .desktop-nav a {color: var(--brown);
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 11px 0;
+  white-space: nowrap;}
+.tdmg-lp .desktop-nav a:hover {color: var(--orange);}
+.tdmg-lp .deco-hills-yellow {left: calc(50% - 1638px);
+  bottom: -382px;          
+  width: 3829px;}
+.tdmg-lp .deco-hills-mask {left: calc(50% - 2013px);
+  bottom: -564px;          
+  width: 4661px;}
+.tdmg-lp .deco-veggies {left: max(16px, calc(50% - 850px));
+  bottom: 50px;            
+  width: 370px;}
+.tdmg-lp .deco-fairies {right: max(20px, calc(50% - 915px));
+  bottom: 245px;           
+  width: 245px;}
+.tdmg-lp .deco-cloud-3 {left: calc(50% - 87px);
+  bottom: 336px;
+  width: 179px;}
+.tdmg-lp .deco-cloud-1 {left: calc(50% - 426px); top: 188px; width: 179px;}
+.tdmg-lp .deco-cloud-2 {left: calc(50% + 1083px); top: 120px; width: 179px;}
+.tdmg-lp .deco-cloud-4 {left: calc(50% + 1267px); top: 278px; width: 116px;}
+.tdmg-lp .deco-cloud-5 {left: calc(50% - 476px); top: 499px; width: 116px;}
+.tdmg-lp .deco-cloud-6 {left: calc(50% + 61px); top: 198px; width: 116px;}
+.tdmg-lp .deco-bird-1 {right: max(30px, calc(50% - 899px)); top: 141px; width: 39px;}
+.tdmg-lp .deco-bird-2 {right: max(70px, calc(50% - 834px)); top: 119px; width: 39px;}
+.tdmg-lp .deco-logo {left: max(24px, calc(50% - 763px));
+  top: calc(50% - 135px);  
+  width: 310px;}
+.tdmg-lp .desktop-nav {left: calc(50% + 318px);
+  top: calc(50% - 234px);}
+.tdmg-lp .mv {position: relative;
+  height: 863px;
+  
+  background: linear-gradient(var(--cream) 0px, var(--cream) 469px, #FEFDFC 469px, #FEFDFC 100%);
+  overflow: visible;}
+.tdmg-lp .mv-logo {position: absolute;
+  left: 243px;
+  top: 8px;
+  width: 119px;
+  height: auto;
+  z-index: 5;}
+.tdmg-lp .mv-headline {position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;}
+.tdmg-lp .mv-headline-art {position: absolute;
+  left: 0;
+  top: 30px;
+  width: 375px;
+  height: 145px;
+  z-index: 4;
+  pointer-events: none;}
+.tdmg-lp .mv-sparkle {position: absolute;
+  left: 142px;
+  top: 168px;
+  width: 63px;
+  height: auto;
+  z-index: 4;}
+.tdmg-lp .mv-subhead {position: absolute;
+  left: 16px;
+  top: 218px;
+  z-index: 4;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0.7px;
+  color: var(--brown);}
+.tdmg-lp .mv-subhead .hl, .tdmg-lp .mv-subhead .brand {color: var(--orange);}
+.tdmg-lp .mv-flower {position: absolute;
+  left: 2px;
+  top: 335px;
+  width: 70px;
+  height: auto;
+  z-index: 1;}
+.tdmg-lp .mv-photo {position: absolute;
+  left: 0;
+  top: 54px;
+  width: 375px;
+  height: 415px;
+  overflow: hidden;
+  z-index: 2;}
+.tdmg-lp .mv-photo img {position: absolute;
+  left: -33.5px;
+  top: 16px;
+  width: 647px;
+  height: auto;}
+.tdmg-lp .mv-leaf-tr {position: absolute;
+  left: 317px;
+  top: 45px;
+  width: 50px;
+  height: auto;
+  z-index: 3;}
+.tdmg-lp .mv-hearts {position: absolute;
+  left: 312px;
+  top: 195px;
+  width: 63px;
+  height: auto;
+  z-index: 3;}
+.tdmg-lp .mv-badges {position: absolute;
+  left: 0;
+  top: 363px;
+  width: 375px;
+  height: 111px;
+  z-index: 4;}
+.tdmg-lp .mv-badge {position: absolute;
+  top: 0;
+  width: 111px;
+  height: 111px;
+  border-radius: 50%;
+  background: rgba(253, 249, 245, 0.8);
+  border: 1px solid rgb(254, 197, 136);}
+.tdmg-lp .mv-badge-1 {left: 28px;}
+.tdmg-lp .mv-badge-2 {left: 133px; width: 110px;}
+.tdmg-lp .mv-badge-3 {left: 237px; width: 110px;}
+.tdmg-lp .mv-badge img {position: absolute;
+  left: -1px;
+  top: -1px;
+  width: 111px;
+  height: 111px;}
+.tdmg-lp .mv-badge p {position: absolute;
+  left: -1px;
+  top: 57px;
+  width: 111px;
+  margin: 0;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.75px;
+  color: rgb(163, 100, 62);}
+.tdmg-lp .mv-badge-1 p {top: 60px;}
+.tdmg-lp .mv-badge .star {color: rgb(230, 90, 43);}
+.tdmg-lp .mv-set-card {position: absolute;
+  left: 31px;
+  top: 495px;
+  width: 313px;
+  height: 244px;
+  background: rgb(255, 250, 227);
+  border: 4px solid rgb(255, 216, 51);
+  border-radius: 10px;
+  z-index: 4;
+  text-decoration: none;
+  color: inherit;
+  display: block;}
+.tdmg-lp .mv-set-card .thumb {position: absolute;
+  left: 11px;
+  top: 36px;
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;}
+.tdmg-lp .mv-set-card .name {position: absolute;
+  left: 103px;
+  top: 51px;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 1px;
+  color: var(--brown);}
+.tdmg-lp .mv-set-card .desc {position: absolute;
+  left: 103px;
+  top: 86px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.75px;
+  color: var(--brown);}
+.tdmg-lp .mv-set-card .off {position: absolute;
+  left: 103px;
+  top: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  padding: 0 6px;
+  background: rgb(253, 209, 128);
+  border-radius: 3px;
+  color: var(--orange);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 24px;
+  white-space: nowrap;}
+.tdmg-lp .mv-set-card .was {position: absolute;
+  left: 12px;
+  top: 165px;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  color: var(--brown);}
+.tdmg-lp .mv-set-card .was s {text-decoration: line-through;}
+.tdmg-lp .mv-set-card .now {position: absolute;
+  left: 103px;
+  top: 160px;
+  margin: 0;
+  font-size: 40px;
+  letter-spacing: 1.2px;
+  font-weight: 700;
+  line-height: 47px;
+  color: rgb(64, 50, 13);
+  white-space: nowrap;}
+.tdmg-lp .mv-set-card .now .tax {font-size: 14px;
+  font-weight: 700;
+  padding-left: 10px;}
+.tdmg-lp .mv-cta {position: absolute;
+  left: 24px;
+  top: 769px;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 325px;
+  height: 60px;
+  background: var(--orange);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 6px 14px rgba(230, 90, 43, 0.28);}
+.tdmg-lp .mv-cta svg {position: absolute;
+  left: 286px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 19px;
+  height: 9px;}
+.tdmg-lp .worries {position: relative;
+  height: 575px;
+  background: #fbeee0;
+  overflow: hidden;}
+.tdmg-lp .worries-bg {position: absolute;
+  left: -95px;
+  top: -48px;
+  width: 1186px;
+  height: 642px;
+  z-index: 0;}
+.tdmg-lp .worries-bubble {position: absolute;
+  left: 45px;
+  top: 15px;
+  width: 287px;
+  height: 139px;
+  z-index: 1;}
+.tdmg-lp .worries-bubble path {fill: rgba(255, 255, 255, 0.92);}
+.tdmg-lp .worries-heading {position: absolute;
+  left: 39px;
+  top: 51px;
+  width: 300px;
+  z-index: 2;
+  margin: 0;
+  text-align: center;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 35px;
+  letter-spacing: 1.35px;
+  color: var(--brown);}
+.tdmg-lp .worries-parents {position: absolute;
+  left: 207px;
+  top: 127px;
+  width: 137px;
+  height: auto;
+  z-index: 2;}
+.tdmg-lp .worries-list {position: relative;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  list-style: none;}
+.tdmg-lp .worries-list li {position: absolute;
+  left: 40px;
+  width: 300px;
+  display: flex;
+  gap: 3px;}
+.tdmg-lp .worries-list li:nth-child(1) {top: 170px;}
+.tdmg-lp .worries-list li:nth-child(2) {top: 264px;}
+.tdmg-lp .worries-list li:nth-child(3) {top: 331px;}
+.tdmg-lp .worries-list li:nth-child(4) {top: 371px;}
+.tdmg-lp .worries-list li:nth-child(5) {top: 438px;}
+.tdmg-lp .worries-list li:nth-child(6) {top: 505px;}
+.tdmg-lp .worries-list img {width: 21px;
+  height: 21px;
+  margin-top: 6px;
+  flex: none;}
+.tdmg-lp .worries-list p {margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 27px;
+  color: var(--brown);}
+.tdmg-lp .worries-list p .accent {color: var(--orange);}
+.tdmg-lp .worries-wave {position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 32px;
+  z-index: 1;}
+.tdmg-lp .importance {position: relative;
+  height: 456px;
+  background: #FCFBF7;
+  overflow: hidden;}
+.tdmg-lp .importance-heading {position: absolute;
+  left: 0;
+  top: 32px;
+  width: 375px;
+  margin: 0;
+  text-align: center;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 1.15px;
+  color: var(--brown);}
+.tdmg-lp .importance-spark-l {position: absolute;
+  left: 10px;
+  top: 37px;
+  width: 45px;
+  height: auto;}
+.tdmg-lp .importance-spark-r {position: absolute;
+  left: 318px;
+  top: 37px;
+  width: 46px;
+  height: auto;}
+.tdmg-lp .importance-cards {position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;}
+.tdmg-lp .importance-cards li {position: absolute;}
+.tdmg-lp .importance-cards img {display: block;}
+.tdmg-lp .imp-card-1 {left: 11px; top: 140px;}
+.tdmg-lp .imp-card-2 {left: 126px; top: 140px;}
+.tdmg-lp .imp-card-3 {left: 241px; top: 140px;}
+.tdmg-lp .imp-card-1 img, .tdmg-lp .imp-card-2 img, .tdmg-lp .imp-card-3 img {width: 124px; height: 105px;}
+.tdmg-lp .imp-card-4 {left: 11px; top: 285px;}
+.tdmg-lp .imp-card-5 {left: 126px; top: 285px;}
+.tdmg-lp .imp-card-6 {left: 238px; top: 285px;}
+.tdmg-lp .imp-card-4 img, .tdmg-lp .imp-card-5 img {width: 124px; height: 95px;}
+.tdmg-lp .imp-card-6 img {width: 134px; height: 100px;}
+.tdmg-lp .importance-cards p {position: absolute;
+  width: 124px;
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0.75px;
+  color: rgb(163, 100, 62);}
+.tdmg-lp .imp-card-1 p, .tdmg-lp .imp-card-2 p, .tdmg-lp .imp-card-3 p {left: 0; top: 105px;}
+.tdmg-lp .imp-card-4 p, .tdmg-lp .imp-card-5 p {left: 0; top: 95px;}
+.tdmg-lp .imp-card-6 p {left: 5px; top: 100px; letter-spacing: 0;}
+.tdmg-lp .about {position: relative;
+  height: 863px;
+  background: #FCFBF7;
+  overflow: hidden;}
+.tdmg-lp .about-hero {position: absolute;
+  left: 0;
+  top: 21px;
+  width: 375px;
+  height: 385px;}
+.tdmg-lp .about-heading {position: absolute;
+  left: 0;
+  top: 409px;
+  width: 375px;
+  margin: 0;
+  text-align: center;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 1.15px;
+  color: var(--brown);
+  z-index: 2;}
+.tdmg-lp .about-heading .accent {color: var(--orange);}
+.tdmg-lp .about-bars i {position: absolute;
+  height: 8px;
+  background: rgb(255, 239, 172);
+  z-index: 1;}
+.tdmg-lp .about-bars i:nth-child(1) {left: 105px; top: 434px; width: 166px;}
+.tdmg-lp .about-bars i:nth-child(2) {left: 61px; top: 467px; width: 247px;}
+.tdmg-lp .about-bars i:nth-child(3) {left: 99px; top: 500px; width: 162px;}
+.tdmg-lp .about-body {position: absolute;
+  left: 32px;
+  top: 523px;
+  width: 313px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0.75px;
+  color: var(--brown);}
+.tdmg-lp .about-list {position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;}
+.tdmg-lp .about-list li {position: absolute; left: 0; width: 375px;}
+.tdmg-lp .about-list li:nth-child(1) {top: 604px;}
+.tdmg-lp .about-list li:nth-child(2) {top: 646px;}
+.tdmg-lp .about-list li:nth-child(3) {top: 688px;}
+.tdmg-lp .about-list li:nth-child(4) {top: 730px;}
+.tdmg-lp .about-list img {position: absolute;
+  left: 47px;
+  top: -2px;
+  width: 32px;
+  height: 32px;}
+.tdmg-lp .about-list p {margin: 0;
+  padding-left: 85px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0.75px;
+  color: var(--brown);}
+.tdmg-lp .about-sep {position: absolute;
+  left: 32px;
+  width: 313px;
+  height: 2px;
+  background: repeating-linear-gradient(90deg, #F9C99C 0 3px, transparent 3px 5.5px);
+  border-radius: 1px;}
+.tdmg-lp .about-sep:nth-of-type(1) {top: 593px;}
+.tdmg-lp .about-sep:nth-of-type(2) {top: 635px;}
+.tdmg-lp .about-sep:nth-of-type(3) {top: 676px;}
+.tdmg-lp .about-sep:nth-of-type(4) {top: 718px;}
+.tdmg-lp .about-sep:nth-of-type(5) {top: 781px;}
+.tdmg-lp .reasons {position: relative;
+  height: 923px;
+  z-index: 1;}
+.tdmg-lp .reasons-bg {position: absolute;
+  left: 0;
+  top: -42px;
+  width: 375px;
+  height: 965px;
+  overflow: hidden;
+  z-index: 0;}
+.tdmg-lp .reasons-bg-base {position: absolute;
+  inset: 0;
+  width: 375px;
+  height: 965px;}
+.tdmg-lp .reasons-bg-pattern {position: absolute;
+  inset: 0;
+  background-image: url('https://cdn.shopify.com/s/files/1/0641/7576/7770/files/reasons-bg-pattern.png');
+  background-size: 470px 530px;
+  background-position: -55px -46px;
+  background-repeat: repeat;}
+.tdmg-lp .reasons-wave {position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;}
+.tdmg-lp .reasons-blobs {position: absolute;
+  inset: 0;
+  width: 375px;
+  height: 923px;
+  z-index: 1;}
+.tdmg-lp .reasons-heading {position: absolute;
+  left: 0;
+  top: -1px;
+  width: 375px;
+  margin: 0;
+  text-align: center;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 1.15px;
+  color: var(--brown);
+  z-index: 3;}
+.tdmg-lp .reasons-heading-bar {position: absolute;
+  left: 105px;
+  top: 25px;
+  width: 162px;
+  height: 8px;
+  background: rgb(255, 239, 172);
+  z-index: 2;}
+.tdmg-lp .reasons-deco {position: absolute; z-index: 1;}
+.tdmg-lp .deco-r-carrot {left: 280px; top: -17px; width: 95px;}
+.tdmg-lp .deco-r-broccoli {left: 0; top: 433px; width: 105px;}
+.tdmg-lp .deco-r-onion {left: 270px; top: 553px; width: 82px;}
+.tdmg-lp .deco-r-potato {left: 5px; top: 753px; width: 110px;}
+.tdmg-lp .reasons-cards {position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 2;}
+.tdmg-lp .reasons-cards li {position: absolute; left: 0; top: 0; width: 0; height: 0;}
+.tdmg-lp .reasons-cards .num {position: absolute;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 19px;
+  color: rgb(253, 148, 75);}
+.tdmg-lp .reasons-cards .ttl {position: absolute;
+  width: 180px;
+  margin: 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: rgb(64, 50, 13);}
+.tdmg-lp .reasons-cards .ph {position: absolute;}
+.tdmg-lp .r-card-1 .num {left: 94px; top: 67px;}
+.tdmg-lp .r-card-1 .ttl {left: 17px; top: 95px;}
+.tdmg-lp .r-card-1 .ph {left: 44.6px; top: 142.1px; width: 123.8px;}
+.tdmg-lp .r-card-2 .num {left: 267px; top: 119px;}
+.tdmg-lp .r-card-2 .ttl {left: 190px; top: 146px;}
+.tdmg-lp .r-card-2 .ph {left: 214.7px; top: 196.4px; width: 121.4px;}
+.tdmg-lp .r-card-3 .num {left: 94px; top: 266px;}
+.tdmg-lp .r-card-3 .ttl {left: 17px; top: 293px;}
+.tdmg-lp .r-card-3 .ph {left: 43.8px; top: 344.4px; width: 121.4px;}
+.tdmg-lp .r-card-4 .num {left: 264px; top: 311px;}
+.tdmg-lp .r-card-4 .ttl {left: 188px; top: 339px;}
+.tdmg-lp .r-card-4 .ph {left: 233px; top: 378px; width: 90px;}
+.tdmg-lp .r-card-5 .num {left: 165px; top: 441px;}
+.tdmg-lp .r-card-5 .ttl {left: 88px; top: 468px;}
+.tdmg-lp .r-card-5 .ph {left: 116.6px; top: 519.4px; width: 123.8px;}
+.tdmg-lp .r-card-6 .num {left: 112px; top: 630px;}
+.tdmg-lp .r-card-6 .ttl {left: 35px; top: 657px;}
+.tdmg-lp .r-card-6 .ph {left: 59.4px; top: 707.2px; width: 121.4px;}
+.tdmg-lp .r-card-7 .num {left: 266px; top: 710px;}
+.tdmg-lp .r-card-7 .ttl {left: 189px; top: 738px;}
+.tdmg-lp .r-card-7 .ph {left: 218.3px; top: 767.1px; width: 121.4px;}
+.tdmg-lp .compare {position: relative;
+  height: 415px;
+  background: #FCFBF7;}
+.tdmg-lp .compare-heading {position: absolute;
+  left: 0;
+  top: 0;
+  width: 375px;
+  margin: 0;
+  text-align: center;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 1.15px;
+  color: var(--brown);}
+.tdmg-lp .compare-leaf-l {position: absolute; left: 47px; top: -5px; width: 58px;}
+.tdmg-lp .compare-leaf-r {position: absolute; left: 277px; top: -5px; width: 50px;}
+.tdmg-lp .compare-table {position: absolute;
+  inset: 0;
+  font-weight: 700;
+  color: var(--brown);}
+.tdmg-lp .compare-table .cell {position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.7px;}
+.tdmg-lp .compare-table .h-tedemogu {left: 102px; top: 58px; width: 84px; height: 52px;
+  background: rgb(253, 148, 75);
+  border-radius: 10px 10px 0 0;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: -0.8px;}
+.tdmg-lp .compare-table .h-a, .tdmg-lp .compare-table .h-c {top: 70px; width: 84px; height: 40px;
+  background: rgba(96, 68, 57, 0.2);
+  border-radius: 10px 10px 0 0;
+  font-size: 12px;
+  line-height: 15px;
+  white-space: nowrap;}
+.tdmg-lp .compare-table .h-a {left: 188px; letter-spacing: -1.2px;}
+.tdmg-lp .compare-table .h-c {left: 274px; letter-spacing: 0.6px;}
+.tdmg-lp .compare-table .lbl {left: 15px; width: 85px; height: 48px;
+  background: rgb(147, 88, 53);
+  border-radius: 10px 0 0 10px;
+  color: #fff;
+  justify-content: flex-start;
+  text-align: left;
+  padding-left: 14px;}
+.tdmg-lp .compare-table .c-t {left: 102px; width: 84px; height: 48px; background: rgb(255, 245, 180);}
+.tdmg-lp .compare-table .c-a {left: 188px; width: 84px; height: 48px; background: rgb(250, 244, 231);}
+.tdmg-lp .compare-table .c-c {left: 274px; width: 84px; height: 48px; background: rgb(250, 244, 231);}
+.tdmg-lp .compare-table .r1 {top: 112px;}
+.tdmg-lp .compare-table .r2 {top: 162px;}
+.tdmg-lp .compare-table .r3 {top: 212px;}
+.tdmg-lp .compare-table .r4 {top: 262px;}
+.tdmg-lp .compare-table .r5 {top: 312px;}
+.tdmg-lp .compare-outline {position: absolute;
+  left: 100.5px;
+  top: 110.5px;
+  width: 87px;
+  height: 251px;
+  border: 3px solid rgb(253, 148, 75);
+  border-radius: 2px;
+  pointer-events: none;}
+.tdmg-lp .voice {position: relative;
+  height: 563px;}
+.tdmg-lp .voice-bg {position: absolute;
+  left: 0;
+  top: -20px;
+  width: 375px;
+  height: 620px;
+  overflow: hidden;
+  z-index: 0;}
+.tdmg-lp .voice-bg img {position: absolute;
+  inset: 0;
+  width: 375px;
+  height: 620px;}
+.tdmg-lp .voice-wave {position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;}
+.tdmg-lp .voice-heading {position: absolute;
+  left: 0;
+  top: 25px;
+  width: 375px;
+  margin: 0;
+  text-align: center;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 1.15px;
+  color: var(--brown);
+  z-index: 2;}
+.tdmg-lp .voice-rating {position: absolute;
+  left: 81px;
+  top: 73px;
+  width: 213px;
+  height: 24px;
+  background: #fff;
+  z-index: 1;}
+.tdmg-lp .voice-rating-text {position: absolute;
+  left: 0;
+  top: 73px;
+  width: 375px;
+  margin: 0;
+  text-align: center;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.95px;
+  color: rgb(163, 100, 62);
+  z-index: 2;}
+.tdmg-lp .voice-rating-text .star {color: var(--orange);}
+.tdmg-lp .voice-spark-l {position: absolute; left: 30px; top: 60px; width: 50px; z-index: 2;}
+.tdmg-lp .voice-spark-r {position: absolute; left: 295px; top: 60px; width: 50px; z-index: 2;}
+.tdmg-lp .voice-list {position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 2;}
+.tdmg-lp .voice-list li {position: absolute;
+  left: 15px;
+  width: 345px;
+  height: 120px;
+  background: #fff;
+  border-radius: 20px;}
+.tdmg-lp .voice-list li:nth-child(1) {top: 113px;}
+.tdmg-lp .voice-list li:nth-child(2) {top: 241px;}
+.tdmg-lp .voice-list li:nth-child(3) {top: 369px;}
+.tdmg-lp .voice-list li::before {content: '';
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  width: 333px;
+  height: 108px;
+  border: 1px dashed rgb(255, 216, 51);
+  border-radius: 20px;}
+.tdmg-lp .voice-list img {position: absolute;
+  top: 15px;
+  width: 90px;
+  height: 90px;}
+.tdmg-lp .voice-list li:nth-child(1) img, .tdmg-lp .voice-list li:nth-child(3) img {left: 25px;}
+.tdmg-lp .voice-list li:nth-child(2) img {left: 224px;}
+.tdmg-lp .voice-list p {position: absolute;
+  top: 20px;
+  width: 186px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 26px;
+  color: rgb(64, 50, 13);}
+.tdmg-lp .voice-list li:nth-child(1) p, .tdmg-lp .voice-list li:nth-child(3) p {left: 131px;}
+.tdmg-lp .voice-list li:nth-child(2) p {left: 25px;}
+.tdmg-lp .voice-list p .accent {color: var(--orange);}
+.tdmg-lp .lineup {position: relative;
+  height: 1409px;
+  background: #FCFBF7;}
+.tdmg-lp .lineup-heading {position: absolute;
+  left: 0;
+  top: 4px;
+  width: 375px;
+  margin: 0;
+  text-align: center;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 1.15px;
+  color: var(--brown);}
+.tdmg-lp .lineup-lead {position: absolute;
+  left: 15px;
+  top: 61px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 26px;
+  color: rgb(64, 50, 13);}
+.tdmg-lp .lineup-grid {position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;}
+.tdmg-lp .lineup-grid .product {position: absolute;
+  width: 160px;}
+.tdmg-lp .lineup-grid .product:nth-child(odd) {left: 15px;}
+.tdmg-lp .lineup-grid .product:nth-child(even) {left: 200px;}
+.tdmg-lp .lineup-grid .product:nth-child(1), .tdmg-lp .lineup-grid .product:nth-child(2) {top: 117px;}
+.tdmg-lp .lineup-grid .product:nth-child(3), .tdmg-lp .lineup-grid .product:nth-child(4) {top: 438px;}
+.tdmg-lp .lineup-grid .product:nth-child(5), .tdmg-lp .lineup-grid .product:nth-child(6) {top: 759px;}
+.tdmg-lp .lineup-grid .product:nth-child(7) {top: 1080px;}
+.tdmg-lp .lineup-grid .age {position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 34px 0 8px;
+  background: rgb(255, 186, 105);
+  color: rgb(64, 50, 13);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 22px;
+  white-space: nowrap;
+  clip-path: polygon(0 0, 100% 0, 88% 50%, 100% 100%, 0 100%);}
+.tdmg-lp .lineup-grid .age.is-9m {background: rgb(255, 216, 51);}
+.tdmg-lp .lineup-grid .age .m {font-size: 14px;}
+.tdmg-lp .lineup-grid .thumb {position: absolute;
+  left: 0;
+  top: 13.5px;
+  width: 160px;
+  height: 140px;
+  object-fit: cover;
+  object-position: center top;}
+.tdmg-lp .lineup-grid .name {position: absolute;
+  left: 0;
+  top: 161px;
+  width: 160px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+  color: rgb(64, 50, 13);}
+.tdmg-lp .lineup-grid .tiers {position: absolute;
+  left: 0;
+  top: 203px;
+  width: 160px;
+  margin: 0;
+  padding: 0;
+  list-style: none;}
+.tdmg-lp .lineup-grid .tier {margin: 0;}
+.tdmg-lp .lineup-grid .tier.is-set {margin-top: 4px;}
+.tdmg-lp .lineup-grid .tier .row {display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 16px;
+  color: rgb(64, 50, 13);
+  white-space: nowrap;}
+.tdmg-lp .lineup-grid .tier .amt .tax {font-size: 9px; font-weight: 700; padding-left: 2px;}
+.tdmg-lp .lineup-grid .tier .unit {margin: 1px 0 0;
+  text-align: right;
+  font-size: 9px;
+  font-weight: 700;
+  color: rgb(220, 38, 38);
+  line-height: 13px;}
+.tdmg-lp .lineup-grid .product::after {content: '';
+  position: absolute;
+  left: 0;
+  top: 293px;
+  width: 159px;
+  height: 1px;
+  background: #ddd;}
+.tdmg-lp .lineup-fairies {position: absolute;
+  left: 225px;
+  top: 1173px;
+  width: 120px;}
+.tdmg-lp .sets {position: relative;
+  height: 2663px;
+  background: #FEF3C0;}
+.tdmg-lp .sets-bg {position: absolute;
+  inset: 0;
+  width: 375px;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;}
+.tdmg-lp .sets-panel {position: absolute;
+  left: 15px;
+  width: 345px;
+  background: #fff;
+  border-radius: 20px;
+  z-index: 1;}
+.tdmg-lp .panel-sets {top: 46px; height: 1525px;}
+.tdmg-lp .panel-bulk {top: 1603px; height: 877px;}
+.tdmg-lp .sets-title {position: absolute;
+  left: 0;
+  top: 0;
+  width: 375px;
+  margin: 0;
+  text-align: center;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 1.15px;
+  color: var(--brown);
+  z-index: 3;}
+.tdmg-lp .sets-title-bar {position: absolute;
+  height: 8px;
+  background: rgb(255, 239, 172);
+  z-index: 2;}
+.tdmg-lp .sets-lead {position: absolute;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0.75px;
+  color: var(--brown);
+  z-index: 3;}
+.tdmg-lp .set-card {position: absolute;
+  left: 31px;
+  width: 313px;
+  background: rgb(255, 250, 227);
+  border: 4px solid rgb(255, 216, 51);
+  border-radius: 10px;
+  z-index: 2;
+  text-decoration: none;
+  color: inherit;
+  display: block;}
+.tdmg-lp .set-card:nth-of-type(1) {top: 283px; height: 244px;}
+.tdmg-lp .set-card:nth-of-type(2) {top: 551px; height: 272px;}
+.tdmg-lp .set-card:nth-of-type(3) {top: 839px; height: 256px;}
+.tdmg-lp .set-card:nth-of-type(4) {top: 1111px; height: 256px;}
+.tdmg-lp .set-ribbon {position: absolute;
+  left: -3px;
+  top: -16px;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 28px 0 14px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+  white-space: nowrap;
+  clip-path: polygon(0 0, 100% 0, 86% 50%, 100% 100%, 0 100%);}
+.tdmg-lp .set-ribbon.is-limited {background: rgb(230, 90, 43);}
+.tdmg-lp .set-ribbon.is-first {background: rgb(57, 181, 74);}
+.tdmg-lp .set-card .thumb {position: absolute;
+  left: 11px;
+  top: 36px;
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;}
+.tdmg-lp .set-card .name {position: absolute;
+  left: 103px;
+  top: 51px;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 1px;
+  color: var(--brown);}
+.tdmg-lp .set-card .desc {position: absolute;
+  left: 103px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.75px;
+  color: var(--brown);}
+.tdmg-lp .set-card .off {position: absolute;
+  left: 103px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  padding: 0 10px;
+  background: rgb(253, 209, 128);
+  border-radius: 3px;
+  color: var(--orange);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  white-space: nowrap;}
+.tdmg-lp .set-card .was {position: absolute;
+  left: 12px;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  color: var(--brown);}
+.tdmg-lp .set-card .was s {text-decoration: line-through;}
+.tdmg-lp .set-card .now {position: absolute;
+  left: 103px;
+  margin: 0;
+  font-size: 40px;
+  letter-spacing: 1.2px;
+  font-weight: 700;
+  line-height: 47px;
+  color: rgb(64, 50, 13);
+  white-space: nowrap;}
+.tdmg-lp .set-card .now .tax {font-size: 14px;
+  font-weight: 700;
+  padding-left: 10px;}
+.tdmg-lp .set-card:nth-of-type(1) .desc {top: 86px;}
+.tdmg-lp .set-card:nth-of-type(1) .off {top: 140px;
+  font-size: 11px;
+  padding: 0 6px;}
+.tdmg-lp .set-card:nth-of-type(1) .was {top: 165px;}
+.tdmg-lp .set-card:nth-of-type(1) .now {top: 160px;}
+.tdmg-lp .set-card:nth-of-type(2) .name {line-height: 28px;}
+.tdmg-lp .set-card:nth-of-type(2) .desc {top: 114px;}
+.tdmg-lp .set-card:nth-of-type(2) .off {top: 158px;}
+.tdmg-lp .set-card:nth-of-type(2) .now {top: 186px;}
+.tdmg-lp .set-card:nth-of-type(3) .name, .tdmg-lp .set-card:nth-of-type(4) .name {top: 31px;}
+.tdmg-lp .set-card:nth-of-type(3) .name, .tdmg-lp .set-card:nth-of-type(4) .name, .tdmg-lp .set-card:nth-of-type(3) .desc, .tdmg-lp .set-card:nth-of-type(4) .desc, .tdmg-lp .set-card:nth-of-type(3) .off, .tdmg-lp .set-card:nth-of-type(4) .off, .tdmg-lp .set-card:nth-of-type(3) .now, .tdmg-lp .set-card:nth-of-type(4) .now {left: 105px;}
+.tdmg-lp .set-card:nth-of-type(3) .desc {top: 105px;}
+.tdmg-lp .set-card:nth-of-type(3) .off {top: 152px;}
+.tdmg-lp .set-card:nth-of-type(3) .now {top: 179px;}
+.tdmg-lp .set-card:nth-of-type(4) .desc {top: 105px;}
+.tdmg-lp .set-card:nth-of-type(4) .off {top: 152px;}
+.tdmg-lp .set-card:nth-of-type(4) .now {top: 179px;}
+.tdmg-lp .bulk-note {position: absolute;
+  left: 31px;
+  top: 1755px;
+  width: 313px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0.75px;
+  color: var(--brown);
+  z-index: 3;}
+.tdmg-lp .bulk-group {position: absolute;
+  left: 0;
+  width: 375px;
+  z-index: 3;}
+.tdmg-lp .bulk-group .head {position: absolute;
+  left: 53px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0.9px;
+  color: var(--brown);}
+.tdmg-lp .bulk-group .icon {position: absolute;
+  width: 54px;
+  height: auto;}
+.tdmg-lp .bulk-row {position: absolute;
+  left: 0;
+  width: 375px;
+  height: 34px;}
+.tdmg-lp .bulk-row .qty {position: absolute;
+  left: 54px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 0.9px;
+  color: var(--brown);}
+.tdmg-lp .bulk-row .amt {position: absolute;
+  left: 98px;
+  font-size: 28px;
+  letter-spacing: 0.9px;
+  font-weight: 700;
+  line-height: 34px;
+  color: rgb(64, 50, 13);
+  white-space: nowrap;}
+.tdmg-lp .bulk-row .amt .tax {font-size: 14px; padding-left: 8px;}
+.tdmg-lp .bulk-row.is-off .amt {color: var(--orange);}
+.tdmg-lp .bulk-row .off {position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 24px;
+  top: 5px;
+  background: rgb(253, 209, 128);
+  border-radius: 3px;
+  color: var(--orange);
+  font-size: 16px;
+  font-weight: 700;}
+.tdmg-lp .sets-cloud {position: absolute; z-index: 2;}
+.tdmg-lp .sets-cloud path {fill: rgb(255, 239, 172);}
+.tdmg-lp .cloud-a {left: 31px; top: 1391px; width: 313px; height: 183px;}
+.tdmg-lp .cloud-b {left: 28px; top: 2284px; width: 321px; height: 199px;}
+.tdmg-lp .sets-cloud-text {position: absolute;
+  margin: 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 1px;
+  color: var(--brown);
+  z-index: 3;}
+.tdmg-lp .sets-cloud-text .accent {color: var(--orange);}
+.tdmg-lp .cloud-a-text {left: 31px; top: 1435px; width: 313px;}
+.tdmg-lp .cloud-b-text {left: 28px; top: 2317px; width: 321px;}
+.tdmg-lp .bulk-dot {position: absolute;
+  left: 32px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--orange);}
+.tdmg-lp .bulk-sep {position: absolute;
+  left: 31px;
+  width: 312px;
+  height: 2px;
+  background: repeating-linear-gradient(90deg, #F5D8B4 0 3px, transparent 3px 5.5px);}
+.tdmg-lp .sets-cta {position: absolute;
+  left: 23px;
+  top: 2528px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 325px;
+  height: 80px;
+  background: var(--orange);
+  border-radius: 40px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0.9px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 6px 14px rgba(230, 90, 43, 0.28);}
+.tdmg-lp .sets-cta svg {position: absolute;
+  left: 291px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 9px;
+  height: 19px;}
+.tdmg-lp .flow {position: relative;
+  height: 431px;
+  background: #FCFBF7;
+  overflow: hidden;}
+.tdmg-lp .flow-bg {position: absolute;
+  inset: 0;
+  width: 375px;
+  height: 431px;
+  z-index: 0;}
+.tdmg-lp .flow-heading {position: absolute;
+  left: 0;
+  top: 78px;
+  width: 375px;
+  margin: 0;
+  text-align: center;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 1.15px;
+  color: var(--brown);
+  z-index: 2;}
+.tdmg-lp .flow-steps {position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 2;}
+.tdmg-lp .flow-steps li {position: absolute;
+  top: 145px;
+  width: 94px;}
+.tdmg-lp .flow-steps li:nth-child(1) {left: 15px;}
+.tdmg-lp .flow-steps li:nth-child(2) {left: 141px;}
+.tdmg-lp .flow-steps li:nth-child(3) {left: 266px;}
+.tdmg-lp .flow-steps .circle {position: absolute;
+  left: 7px;
+  top: 5px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgb(253, 249, 244);}
+.tdmg-lp .flow-steps .icon {position: absolute;
+  left: 23px;
+  top: 21px;
+  width: 48px;
+  height: 48px;}
+.tdmg-lp .flow-steps .num {position: absolute;
+  left: 29px;
+  top: -17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgb(253, 148, 75);
+  color: #fff;
+  font-size: 21px;
+  font-weight: 700;
+  z-index: 2;}
+.tdmg-lp .flow-steps .ttl {position: absolute;
+  left: -8px;
+  top: 96px;
+  width: 110px;
+  margin: 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.9px;
+  color: var(--brown);}
+.tdmg-lp .flow-steps .txt {position: absolute;
+  left: 0;
+  top: 125px;
+  width: 94px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.7px;
+  color: var(--brown);}
+.tdmg-lp .flow-steps li:nth-child(3) .txt {top: 147px;}
+.tdmg-lp .flow-arrow {position: absolute;
+  top: 181px;
+  width: 40px;
+  height: auto;
+  z-index: 2;}
+.tdmg-lp .flow-arrow-1 {left: 110px;}
+.tdmg-lp .flow-arrow-2 {left: 236px;}
+.tdmg-lp .faq {position: relative;
+  padding: 8px 0 34px;
+  background: #FCFBF7;}
+.tdmg-lp .faq-heading {margin: 0 0 18px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 1.2px;
+  color: var(--brown);}
+.tdmg-lp .faq-list {margin: 0 15px;}
+.tdmg-lp .faq-list details {border-top: 1px solid rgb(229, 217, 193);
+  padding: 28px 0 32px;}
+.tdmg-lp .faq-list details:first-of-type {padding-top: 24px;}
+.tdmg-lp .faq-list details:last-of-type {border-bottom: 1px solid rgb(229, 217, 193);}
+.tdmg-lp .faq-list summary {position: relative;
+  min-height: 44px;
+  padding: 0 60px 0 50px;
+  list-style: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: 0.9px;
+  color: var(--brown);}
+.tdmg-lp .faq-list summary::-webkit-details-marker {display: none;}
+.tdmg-lp .faq-list summary::before {content: 'Q';
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50% 50% 50% 4px;
+  background: rgb(253, 148, 75);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;}
+.tdmg-lp .faq-list summary::after {content: '';
+  position: absolute;
+  right: 4px;
+  top: 14px;
+  width: 14px;
+  height: 3px;
+  background: rgb(253, 148, 75);
+  border-radius: 1px;}
+.tdmg-lp .faq-list summary .plus {position: absolute;
+  right: 9.5px;
+  top: 8.5px;
+  width: 3px;
+  height: 14px;
+  background: rgb(253, 148, 75);
+  border-radius: 1px;
+  transition: opacity .15s;}
+.tdmg-lp .faq-list details[open] summary .plus {opacity: 0;}
+.tdmg-lp .faq-list details.is-closing summary .plus {opacity: 1;}
+.tdmg-lp .faq-list .answer {position: relative;
+  overflow: hidden;     
+  margin: 0;
+  padding: 14px 25px 0 50px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0.7px;
+  color: var(--brown);}
+.tdmg-lp .faq-list .answer::before {content: 'A';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50% 50% 50% 4px;
+  border: 1.5px solid rgb(253, 148, 75);
+  background: #fff;
+  color: rgb(253, 148, 75);
+  font-size: 19px;
+  font-weight: 700;}
+.tdmg-lp .final {position: relative;
+  height: 898px;
+  background: #FCFBF7;
+  overflow: hidden;}
+.tdmg-lp .final-bunting-l {position: absolute; left: 10px; top: 40px; width: 140px;}
+.tdmg-lp .final-bunting-r {position: absolute; left: 228px; top: 40px; width: 140px;}
+.tdmg-lp .final-crown {position: absolute; left: 165px; top: 28px; width: 45px;}
+.tdmg-lp .final-lead {position: absolute;
+  left: 0;
+  top: 69px;
+  width: 375px;
+  margin: 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 35px;
+  letter-spacing: 1.2px;
+  color: var(--brown);
+  z-index: 2;}
+.tdmg-lp .final-lead .price {color: var(--orange);}
+.tdmg-lp .final-lead-bar {position: absolute;
+  left: 24px;
+  top: 166px;
+  width: 315px;
+  height: 8px;
+  background: rgb(255, 239, 172);
+  z-index: 1;}
+.tdmg-lp .final-sub {position: absolute;
+  left: 0;
+  top: 198px;
+  width: 375px;
+  margin: 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 1.2px;
+  color: var(--brown);
+  z-index: 2;}
+.tdmg-lp .final-sub .brand {color: var(--orange);}
+.tdmg-lp .final-badges {position: absolute;
+  left: 0;
+  top: 271px;
+  width: 375px;
+  height: 120px;}
+.tdmg-lp .final-badges img {position: absolute;
+  top: 0;
+  width: 120px;
+  height: 120px;}
+.tdmg-lp .final-badges img:nth-child(1) {left: 15px;}
+.tdmg-lp .final-badges img:nth-child(2) {left: 128px;}
+.tdmg-lp .final-badges img:nth-child(3) {left: 241px;}
+.tdmg-lp .final-cta {position: absolute;
+  left: 24px;
+  top: 439px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 325px;
+  height: 60px;
+  background: var(--orange);
+  border-radius: 30px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+  box-shadow: 0 6px 14px rgba(230, 90, 43, 0.28);}
+.tdmg-lp .final-cta svg {position: absolute;
+  left: 291px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 9px;
+  height: 19px;}
+.tdmg-lp .final-footer {position: absolute;
+  left: 0;
+  top: 600px;
+  width: 375px;
+  height: 298px;}
+.tdmg-lp .final-footer .bg {position: absolute;
+  inset: 0;
+  width: 375px;
+  height: 298px;}
+.tdmg-lp .final-footer .birds {position: absolute;
+  left: 32px;
+  top: -48px;
+  width: 122px;}
+.tdmg-lp .final-footer nav {position: absolute;
+  left: 0;
+  top: 143px;
+  width: 375px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.6px;
+  color: var(--brown);}
+.tdmg-lp .final-footer nav a {color: var(--brown);
+  text-decoration: none;}
+.tdmg-lp .final-footer nav a:hover {text-decoration: underline;}
+.tdmg-lp .final-footer nav .divider {padding: 0 10px;}
+.tdmg-lp .final-footer .copy {position: absolute;
+  left: 0;
+  top: 169px;
+  width: 375px;
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  color: var(--brown);}
+.tdmg-lp .sticky-cta {position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  padding: 10px 15px calc(10px + env(safe-area-inset-bottom, 0px));
+  background: rgba(255, 253, 250, 0.96);
+  box-shadow: 0 -4px 16px rgba(64, 50, 13, 0.12);
+  transform: translateY(100%);
+  transition: transform 0.25s ease;
+  pointer-events: none;}
+.tdmg-lp .sticky-cta.is-visible {transform: translateY(0);
+  pointer-events: auto;}
+.tdmg-lp .sticky-cta a {display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 345px;
+  height: 60px;
+  background: var(--orange);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 6px 14px rgba(230, 90, 43, 0.28);}
+.tdmg-lp .sticky-cta .badge {flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  padding: 0 12px;
+  background: #fff;
+  color: var(--orange);
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 999px;
+  white-space: nowrap;}
+.tdmg-lp .sticky-cta .text {white-space: nowrap;}
+.tdmg-lp .sticky-cta .arrow {flex: none;
+  width: 7px;
+  height: 15px;}
+</style>
+
+<div class="tdmg-lp">
+<div class="page">
+
+  <div class="desktop-deco" aria-hidden="true">
+    <img class="deco-item deco-hills-yellow" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/mv-bg-hills-yellow.png" alt="">
+    <img class="deco-item deco-hills-mask" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/mv-bg-hills-mask.png" alt="">
+    <img class="deco-item deco-veggies" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/mv-veggies-row.png" alt="">
+    <img class="deco-item deco-fairies" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/mv-fairies-pair.png" alt="">
+    <img class="deco-item deco-cloud-1" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/mv-cloud-large.png" alt="">
+    <img class="deco-item deco-cloud-2" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/mv-cloud-large.png" alt="">
+    <img class="deco-item deco-cloud-3" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/mv-cloud-large.png" alt="">
+    <img class="deco-item deco-cloud-4" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/mv-cloud-small-b.png" alt="">
+    <img class="deco-item deco-cloud-5" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/mv-cloud-small-a.png" alt="">
+    <img class="deco-item deco-cloud-6" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/mv-cloud-small-b.png" alt="">
+    <img class="deco-item deco-bird-1" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/mv-bird-01.png" alt="">
+    <img class="deco-item deco-bird-2" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/mv-bird-02.png" alt="">
+    <img class="deco-item deco-logo" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/mv-logo-tedemogu.png" alt="TEDEMOGU">
+    <nav class="deco-item desktop-nav">
+      <a href="#chosen">選ばれる理由</a>
+      <a href="#compare">他社との違い</a>
+      <a href="#voice">お客様の声</a>
+      <a href="#lineup">商品ラインナップ&amp;価格</a>
+      <a href="#campaign">キャンペーン</a>
+      <a href="#faq">よくある質問</a>
+    </nav>
+  </div>
+
+  <div class="lp">
+
+    <section class="mv" id="mv">
+      <img class="mv-logo" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/mv-logo-tedemogu.png" alt="TEDEMOGU">
+
+      <h1 class="mv-headline">もう、毎日<br>「何を食べさせよう」と<br>悩まない。</h1>
+      <img class="mv-headline-art" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/mv-headline.svg" alt="" aria-hidden="true">
+      <img class="mv-sparkle" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/mv-deco-sparkle-headline.png" alt="">
+
+      <p class="mv-subhead"><span class="hl">手づかみ食べ</span>の<br>ために生まれた、<br>0歳から安心してあげられる<br>固形の離乳食「<span class="brand">てでもぐ</span>」</p>
+      <img class="mv-flower" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/mv-deco-flower-left.png" alt="">
+
+      <div class="mv-photo">
+        <img src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/mv-hero-baby.jpg" alt="てでもぐを手づかみで食べる赤ちゃん">
+      </div>
+      <img class="mv-leaf-tr" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/mv-deco-leaf-topright.png" alt="">
+      <img class="mv-hearts" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/mv-deco-hearts-right.png" alt="">
+
+      <div class="mv-badges">
+        <div class="mv-badge mv-badge-1">
+          <img src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/mv-badge-icon-1.svg" alt="">
+          <p>管理栄養士<br>監修</p>
+        </div>
+        <div class="mv-badge mv-badge-2">
+          <img src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/mv-badge-icon-2.svg" alt="">
+          <p>口コミ<br><span class="star">★</span>4.33</p>
+        </div>
+        <div class="mv-badge mv-badge-3">
+          <img src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/mv-badge-icon-3.svg" alt="">
+          <p>化学添加物<br>不使用</p>
+        </div>
+      </div>
+
+      <a class="mv-set-card" href="https://shop.eatbyhand.co.jp/discount/allset7912?redirect=%2Fproducts%2Fassortment" data-handle="assortment">
+        <span class="set-ribbon is-limited">期間限定</span>
+        <img class="thumb" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/sets-set-all.jpg" alt="全種セット">
+        <p class="name">全種セット</p>
+        <p class="desc">全7種コンプリート<br>【単品合計だと¥11,500】</p>
+        <span class="off">今だけ！20%OFF・1,978円おトク！！</span>
+        <p class="was">通常<br><s>¥9,890(税込)</s></p>
+        <p class="now">¥7,912<span class="tax">(税込)</span></p>
+      </a>
+
+      <a class="mv-cta" href="#lineup">
+        商品一覧を見る
+        <svg viewBox="0 0 19 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l8.5 7L18 1" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </section>
+
+    <section class="worries" id="worries">
+      <img class="worries-bg" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/worries-bg-texture.jpg" alt="">
+      <svg class="worries-bubble" viewBox="0 0 300 150" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M18 68 C12 32 55 10 108 9 C158 3 222 -2 262 18 C299 34 300 62 288 82 C302 98 278 128 228 136 C178 143 118 141 68 136 C26 131 3 108 18 68 Z"/>
+      </svg>
+      <h2 class="worries-heading">こんなお悩み<br>ありませんか?</h2>
+      <img class="worries-parents" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/worries-parents.png" alt="悩む夫婦のイラスト">
+
+      <ul class="worries-list">
+        <li><img src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/worries-checkmark.png" alt=""><p>仕事や家事で、<br>離乳食を作る<br><span class="accent">時間が取れない</span></p></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/worries-checkmark.png" alt=""><p>手づかみ食べ用の固形メニューを<br><span class="accent">考えるのが大変</span></p></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/worries-checkmark.png" alt=""><p>準備と後片付けが、地味に<span class="accent">しんどい</span></p></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/worries-checkmark.png" alt=""><p>落ち着いて食べてくれず、<br>食事のたびに<span class="accent">気疲れする</span></p></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/worries-checkmark.png" alt=""><p>レトルトだと、食べる練習に<br><span class="accent">なっている気がしない</span></p></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/worries-checkmark.png" alt=""><p>メニューが<span class="accent">ワンパターン</span>になりがち</p></li>
+      </ul>
+
+      <svg class="worries-wave" viewBox="0 0 375 32" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M0 16 C 60 32, 110 0, 190 12 C 260 22, 320 2, 375 14 L375 32 L0 32 Z" fill="#FCFBF7"/>
+      </svg>
+    </section>
+
+    <section class="importance" id="importance">
+      <h2 class="importance-heading">実は、手づかみ食べは<br>赤ちゃんの発達にとって<br>とても大切です。</h2>
+      <img class="importance-spark-l" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/importance-spark-left.png" alt="">
+      <img class="importance-spark-r" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/importance-spark-right.png" alt="">
+
+      <ul class="importance-cards">
+        <li class="imp-card-1"><img src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/importance-card-1.png" alt=""><p>運動機能の<br>発達</p></li>
+        <li class="imp-card-2"><img src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/importance-card-2.png" alt=""><p>自己表現力<br>の向上</p></li>
+        <li class="imp-card-3"><img src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/importance-card-3.png" alt=""><p>食べる楽しさ<br>の理解</p></li>
+        <li class="imp-card-4"><img src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/importance-card-4.png" alt=""><p>口腔機能の<br>発達</p></li>
+        <li class="imp-card-5"><img src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/importance-card-5.png" alt=""><p>感覚の発達</p></li>
+        <li class="imp-card-6"><img src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/importance-card-6.png" alt=""><p>楽しい<br>食事時間</p></li>
+      </ul>
+    </section>
+
+    <!-- 栄養士コメント section (canvas 1699..2039) is hidden for now by request -->
+
+    <section class="about" id="about">
+      <img class="about-hero" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/about-hero-blob.jpg" alt="お皿に盛り付けたてでもぐの離乳食">
+      <div class="about-bars" aria-hidden="true"><i></i><i></i><i></i></div>
+      <h2 class="about-heading">てでもぐ」は、<br><span class="accent">手づかみ食べ</span>のために<br>生まれました。</h2>
+      <p class="about-body">レンジで温めるだけ。0歳から安心してあげられる固形の離乳食です。</p>
+
+      <div class="about-sep" aria-hidden="true"></div>
+      <div class="about-sep" aria-hidden="true"></div>
+      <div class="about-sep" aria-hidden="true"></div>
+      <div class="about-sep" aria-hidden="true"></div>
+      <div class="about-sep" aria-hidden="true"></div>
+
+      <ul class="about-list">
+        <li><img src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/about-check-circle.png" alt=""><p>赤ちゃんがつかみやすいサイズ</p></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/about-check-circle.png" alt=""><p>飲み込みやすい水分量</p></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/about-check-circle.png" alt=""><p>歯ぐきでかみやすいやわらかさ</p></li>
+        <li><img src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/about-check-circle.png" alt=""><p>調理不要・レンジ加熱のみ /<br>全7種のメニュー展開</p></li>
+      </ul>
+    </section>
+
+    <section class="reasons" id="chosen">
+      <div class="reasons-bg" aria-hidden="true">
+        <img class="reasons-bg-base" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/reasons-bg-base.jpg" alt="">
+        <div class="reasons-bg-pattern"></div>
+        <svg class="reasons-wave" viewBox="0 0 375 965" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0 L0 42 L3 45 L6 42 L9 39 L12 36 L15 34 L18 33 L21 33 L24 32 L27 32 L30 32 L33 32 L36 32 L39 31 L42 31 L45 30 L48 28 L51 26 L54 24 L57 21 L60 19 L63 17 L66 16 L69 15 L72 15 L75 15 L78 15 L81 15 L84 15 L87 16 L90 16 L93 16 L96 16 L99 15 L102 14 L105 13 L108 11 L111 10 L114 8 L117 6 L120 5 L123 5 L126 4 L129 5 L132 5 L135 6 L138 7 L141 8 L144 8 L147 9 L150 9 L153 9 L156 8 L159 7 L162 6 L165 5 L168 4 L171 3 L174 2 L177 1 L180 1 L183 1 L186 2 L189 3 L192 4 L195 6 L198 7 L201 8 L204 9 L207 9 L210 9 L213 9 L216 8 L219 7 L222 6 L225 6 L228 5 L231 5 L234 4 L237 5 L240 6 L243 7 L246 9 L249 10 L252 12 L255 13 L258 15 L261 16 L264 16 L267 16 L270 16 L273 16 L276 15 L279 15 L282 15 L285 15 L288 15 L291 15 L294 16 L297 18 L300 20 L303 22 L306 24 L309 27 L312 29 L315 31 L318 31 L321 32 L324 32 L327 32 L330 32 L333 32 L336 33 L339 33 L342 34 L345 35 L348 37 L351 40 L354 43 L357 46 L360 50 L363 52 L366 54 L369 56 L372 57 L374 0 Z" fill="#FCFBF7"/>
+          <path d="M0 965 L0 920 L3 961 L6 958 L9 954 L12 952 L15 950 L18 949 L21 948 L24 948 L27 948 L30 948 L33 948 L36 947 L39 947 L42 946 L45 945 L48 944 L51 942 L54 940 L57 937 L60 935 L63 933 L66 932 L69 931 L72 930 L75 930 L78 930 L81 931 L84 931 L87 932 L90 932 L93 932 L96 932 L99 931 L102 930 L105 928 L108 927 L111 925 L114 923 L117 922 L120 921 L123 920 L126 920 L129 920 L132 921 L135 922 L138 922 L141 923 L144 924 L147 924 L150 925 L153 925 L156 924 L159 923 L162 922 L165 921 L168 920 L171 919 L174 918 L177 917 L180 917 L183 917 L186 918 L189 919 L192 920 L195 921 L198 922 L201 923 L204 924 L207 925 L210 925 L213 924 L216 924 L219 923 L222 922 L225 921 L228 921 L231 920 L234 920 L237 921 L240 921 L243 923 L246 924 L249 926 L252 927 L255 929 L258 930 L261 931 L264 932 L267 932 L270 932 L273 931 L276 931 L279 931 L282 930 L285 930 L288 930 L291 931 L294 932 L297 934 L300 936 L303 938 L306 940 L309 943 L312 944 L315 946 L318 947 L321 947 L324 947 L327 948 L330 948 L333 948 L336 948 L339 949 L342 949 L345 951 L348 953 L351 955 L354 959 L357 962 L360 964 L363 964 L366 964 L369 964 L372 964 L374 965 Z" fill="#FCFBF7"/>
+        </svg>
+      </div>
+      <img class="reasons-blobs" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/reasons-blobs.svg" alt="">
+      <div class="reasons-heading-bar" aria-hidden="true"></div>
+      <h2 class="reasons-heading">選ばれる理由</h2>
+
+      <img class="reasons-deco deco-r-carrot" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/reasons-deco-carrot.png" alt="">
+      <img class="reasons-deco deco-r-broccoli" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/reasons-deco-broccoli.png" alt="">
+      <img class="reasons-deco deco-r-onion" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/reasons-deco-onion.png" alt="">
+      <img class="reasons-deco deco-r-potato" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/reasons-deco-potato.png" alt="">
+
+      <ul class="reasons-cards">
+        <li class="r-card-1"><span class="num">01</span><p class="ttl">化学添加物<br>不使用</p><img class="ph" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/reasons-photo-c1.png" alt="化学添加物不使用"></li>
+        <li class="r-card-2"><span class="num">02</span><p class="ttl">国産原材料<br>優先</p><img class="ph" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/reasons-photo-c2.png" alt="国産原材料優先"></li>
+        <li class="r-card-3"><span class="num">03</span><p class="ttl">7大アレルゲン<br>不使用</p><img class="ph" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/reasons-photo-c3.png" alt="7大アレルゲン不使用"></li>
+        <li class="r-card-4"><span class="num">04</span><p class="ttl">有機JAS認定</p><img class="ph" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/reasons-jas-logo.png" alt="有機JAS認定ロゴ"></li>
+        <li class="r-card-5"><span class="num">05</span><p class="ttl">管理栄養士<br>監修</p><img class="ph" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/reasons-photo-c5.png" alt="管理栄養士監修"></li>
+        <li class="r-card-6"><span class="num">06</span><p class="ttl">つまみやすい<br>形状</p><img class="ph" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/reasons-photo-c6.png" alt="つまみやすい形状"></li>
+        <li class="r-card-7"><span class="num">07</span><p class="ttl">全国配送対応</p><img class="ph" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/reasons-photo-c7.png" alt="全国配送対応"></li>
+      </ul>
+    </section>
+
+    <section class="compare" id="compare">
+      <h2 class="compare-heading">他社との違い</h2>
+      <img class="compare-leaf-l" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/compare-leaf-left.png" alt="">
+      <img class="compare-leaf-r" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/compare-leaf-right.png" alt="">
+
+      <div class="compare-table" role="table" aria-label="他社との比較表">
+        <div class="cell h-tedemogu">てでもぐ</div>
+        <div class="cell h-a">A社<br>（高級レトルト）</div>
+        <div class="cell h-c">C社<br>（幼児食宅配）</div>
+
+        <div class="cell lbl r1">手づかみ<br>対応</div>
+        <div class="cell c-t r1">◎</div>
+        <div class="cell c-a r1">△</div>
+        <div class="cell c-c r1">△</div>
+
+        <div class="cell lbl r2">対象月齢</div>
+        <div class="cell c-t r2">9ヶ月〜</div>
+        <div class="cell c-a r2">5ヶ月〜</div>
+        <div class="cell c-c r2">1歳半〜</div>
+
+        <div class="cell lbl r3">形状</div>
+        <div class="cell c-t r3">固形</div>
+        <div class="cell c-a r3">ペースト<br>中心</div>
+        <div class="cell c-c r3">おかず<br>中心</div>
+
+        <div class="cell lbl r4">調理の<br>手間</div>
+        <div class="cell c-t r4">レンジ<br>のみ</div>
+        <div class="cell c-a r4">そのまま</div>
+        <div class="cell c-c r4">盛り付け<br>のみ</div>
+
+        <div class="cell lbl r5">栄養面</div>
+        <div class="cell c-t r5">管理栄養士<br>監修</div>
+        <div class="cell c-a r5">企業基準</div>
+        <div class="cell c-c r5">企業基準</div>
+
+        <div class="compare-outline" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="voice" id="voice">
+      <div class="voice-bg" aria-hidden="true">
+        <img src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/voice-bg-texture.jpg" alt="">
+        <svg class="voice-wave" viewBox="0 0 375 620" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0 L0 47 L3 49 L6 46 L9 43 L12 40 L15 38 L18 37 L21 37 L24 36 L27 36 L30 36 L33 36 L36 36 L39 35 L42 35 L45 34 L48 32 L51 30 L54 28 L57 25 L60 23 L63 21 L66 20 L69 19 L72 19 L75 19 L78 19 L81 19 L84 19 L87 20 L90 20 L93 20 L96 20 L99 19 L102 18 L105 17 L108 15 L111 13 L114 12 L117 10 L120 9 L123 9 L126 8 L129 9 L132 9 L135 10 L138 11 L141 11 L144 12 L147 13 L150 13 L153 13 L156 12 L159 11 L162 10 L165 9 L168 8 L171 7 L174 6 L177 5 L180 5 L183 5 L186 6 L189 7 L192 8 L195 9 L198 11 L201 12 L204 13 L207 13 L210 13 L213 13 L216 12 L219 11 L222 10 L225 10 L228 9 L231 8 L234 8 L237 9 L240 10 L243 11 L246 12 L249 14 L252 16 L255 17 L258 19 L261 20 L264 20 L267 20 L270 20 L273 20 L276 19 L279 19 L282 19 L285 19 L288 19 L291 19 L294 20 L297 22 L300 24 L303 26 L306 28 L309 31 L312 33 L315 34 L318 35 L321 36 L324 36 L327 36 L330 36 L333 36 L336 37 L339 37 L342 38 L345 39 L348 41 L351 44 L354 47 L357 50 L360 54 L363 56 L366 58 L369 60 L372 61 L374 0 Z" fill="#FCFBF7"/>
+          <path d="M0 620 L0 580 L3 583 L6 580 L9 576 L12 574 L15 572 L18 571 L21 570 L24 570 L27 570 L30 570 L33 570 L36 569 L39 569 L42 568 L45 567 L48 566 L51 564 L54 562 L57 559 L60 557 L63 555 L66 554 L69 553 L72 552 L75 552 L78 553 L81 553 L84 553 L87 554 L90 554 L93 554 L96 554 L99 553 L102 552 L105 551 L108 549 L111 547 L114 545 L117 544 L120 543 L123 542 L126 542 L129 542 L132 543 L135 544 L138 544 L141 545 L144 546 L147 546 L150 547 L153 547 L156 546 L159 545 L162 544 L165 543 L168 542 L171 540 L174 540 L177 539 L180 539 L183 539 L186 540 L189 541 L192 542 L195 543 L198 544 L201 545 L204 546 L207 547 L210 547 L213 546 L216 546 L219 545 L222 544 L225 543 L228 543 L231 542 L234 542 L237 543 L240 543 L243 545 L246 546 L249 548 L252 549 L255 551 L258 552 L261 553 L264 554 L267 554 L270 554 L273 553 L276 553 L279 553 L282 552 L285 552 L288 552 L291 553 L294 554 L297 556 L300 558 L303 560 L306 562 L309 565 L312 567 L315 568 L318 569 L321 569 L324 569 L327 570 L330 570 L333 570 L336 570 L339 571 L342 572 L345 573 L348 575 L351 577 L354 581 L357 584 L360 586 L363 586 L366 586 L369 586 L372 586 L374 620 Z" fill="#FCFBF7"/>
+        </svg>
+      </div>
+
+      <h2 class="voice-heading">お客様の声</h2>
+      <div class="voice-rating" aria-hidden="true"></div>
+      <p class="voice-rating-text">口コミ評価平均 <span class="star">★</span>4.33</p>
+      <img class="voice-spark-l" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/voice-spark-left.png" alt="">
+      <img class="voice-spark-r" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/voice-spark-right.png" alt="">
+
+      <ul class="voice-list">
+        <li>
+          <img src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/voice-avatar-1.png" alt="">
+          <p>1歳2ヶ月の子どもがおにぎりを<span class="accent">ぱくぱく食べてくれました</span>。</p>
+        </li>
+        <li>
+          <img src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/voice-avatar-2.png" alt="">
+          <p>俵形が握りやすく、ほどよい柔らかさで<span class="accent">食べやすい</span>です。</p>
+        </li>
+        <li>
+          <img src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/voice-avatar-3.png" alt="">
+          <p>原材料の<span class="accent">安心感</span>と、手づかみで食べさせやすいところが決め手でした。</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="lineup" id="lineup">
+      <h2 class="lineup-heading">商品ラインナップ&amp;価格</h2>
+      <p class="lineup-lead">全7種類、単品¥1,580〜。価格はすべて税込です。</p>
+
+      <ul class="lineup-grid">
+        <li class="product" data-handle="tofuhamburg">
+          <span class="age is-9m"><span class="m">9</span>か月頃〜</span>
+          <img class="thumb" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/lineup-p1.jpg" alt="ぶた肉と野菜入り豆腐ハンバーグ">
+          <p class="name">ぶた肉と野菜入り豆腐ハンバーグ</p>
+          <ul class="tiers">
+            <li class="tier"><div class="row"><span class="qty">1袋</span><span class="amt">¥1,690<span class="tax">(税込)</span></span></div></li>
+            <li class="tier is-set"><div class="row"><span class="qty">3袋セット</span><span class="amt">¥4,550<span class="tax">(税込)</span></span></div><p class="unit">1袋あたり¥173おトク</p></li>
+            <li class="tier is-set"><div class="row"><span class="qty">5袋セット</span><span class="amt">¥7,080<span class="tax">(税込)</span></span></div><p class="unit">1袋あたり¥274おトク</p></li>
+          </ul>
+        </li>
+        <li class="product" data-handle="chickenhamburg">
+          <span class="age"><span class="m">12</span>か月頃〜</span>
+          <img class="thumb" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/lineup-p2.jpg" alt="とり肉と野菜入り豆腐ハンバーグ">
+          <p class="name">とり肉と野菜入り豆腐ハンバーグ</p>
+          <ul class="tiers">
+            <li class="tier"><div class="row"><span class="qty">1袋</span><span class="amt">¥1,690<span class="tax">(税込)</span></span></div></li>
+            <li class="tier is-set"><div class="row"><span class="qty">3袋セット</span><span class="amt">¥4,550<span class="tax">(税込)</span></span></div><p class="unit">1袋あたり¥173おトク</p></li>
+            <li class="tier is-set"><div class="row"><span class="qty">5袋セット</span><span class="amt">¥7,080<span class="tax">(税込)</span></span></div><p class="unit">1袋あたり¥274おトク</p></li>
+          </ul>
+        </li>
+        <li class="product" data-handle="fish-hamburg">
+          <span class="age"><span class="m">12</span>か月頃〜</span>
+          <img class="thumb" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/lineup-p3.jpg" alt="お魚入り豆腐ハンバーグ">
+          <p class="name">お魚入り豆腐ハンバーグ</p>
+          <ul class="tiers">
+            <li class="tier"><div class="row"><span class="qty">1袋</span><span class="amt">¥1,690<span class="tax">(税込)</span></span></div></li>
+            <li class="tier is-set"><div class="row"><span class="qty">3袋セット</span><span class="amt">¥4,550<span class="tax">(税込)</span></span></div><p class="unit">1袋あたり¥173おトク</p></li>
+            <li class="tier is-set"><div class="row"><span class="qty">5袋セット</span><span class="amt">¥7,080<span class="tax">(税込)</span></span></div><p class="unit">1袋あたり¥274おトク</p></li>
+          </ul>
+        </li>
+        <li class="product" data-handle="oyaki">
+          <span class="age is-9m"><span class="m">9</span>か月頃〜</span>
+          <img class="thumb" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/lineup-p4.jpg" alt="北海道産じゃがいものおやき">
+          <p class="name">北海道産じゃがいものおやき</p>
+          <ul class="tiers">
+            <li class="tier"><div class="row"><span class="qty">1袋</span><span class="amt">¥1,690<span class="tax">(税込)</span></span></div></li>
+            <li class="tier is-set"><div class="row"><span class="qty">3袋セット</span><span class="amt">¥4,550<span class="tax">(税込)</span></span></div><p class="unit">1袋あたり¥173おトク</p></li>
+            <li class="tier is-set"><div class="row"><span class="qty">5袋セット</span><span class="amt">¥7,080<span class="tax">(税込)</span></span></div><p class="unit">1袋あたり¥274おトク</p></li>
+          </ul>
+        </li>
+        <li class="product" data-handle="riceball_sesame">
+          <span class="age"><span class="m">12</span>か月頃〜</span>
+          <img class="thumb" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/lineup-p5.jpg" alt="きな粉とすりごまの軟飯おにぎり">
+          <p class="name">きな粉とすりごまの軟飯おにぎり</p>
+          <ul class="tiers">
+            <li class="tier"><div class="row"><span class="qty">1袋</span><span class="amt">¥1,580<span class="tax">(税込)</span></span></div></li>
+            <li class="tier is-set"><div class="row"><span class="qty">3袋セット</span><span class="amt">¥4,130<span class="tax">(税込)</span></span></div><p class="unit">1袋あたり¥203おトク</p></li>
+            <li class="tier is-set"><div class="row"><span class="qty">5袋セット</span><span class="amt">¥6,370<span class="tax">(税込)</span></span></div><p class="unit">1袋あたり¥306おトク</p></li>
+          </ul>
+        </li>
+        <li class="product" data-handle="riceball_aosa">
+          <span class="age"><span class="m">12</span>か月頃〜</span>
+          <img class="thumb" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/lineup-p6.jpg" alt="あおさとしらすの軟飯おにぎり">
+          <p class="name">あおさとしらすの軟飯おにぎり</p>
+          <ul class="tiers">
+            <li class="tier"><div class="row"><span class="qty">1袋</span><span class="amt">¥1,580<span class="tax">(税込)</span></span></div></li>
+            <li class="tier is-set"><div class="row"><span class="qty">3袋セット</span><span class="amt">¥4,130<span class="tax">(税込)</span></span></div><p class="unit">1袋あたり¥203おトク</p></li>
+            <li class="tier is-set"><div class="row"><span class="qty">5袋セット</span><span class="amt">¥6,370<span class="tax">(税込)</span></span></div><p class="unit">1袋あたり¥306おトク</p></li>
+          </ul>
+        </li>
+        <li class="product" data-handle="riceball_driedbonito">
+          <span class="age"><span class="m">12</span>か月頃〜</span>
+          <img class="thumb" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/lineup-p7.jpg" alt="小松菜とかつおぶしの軟飯おにぎり">
+          <p class="name">小松菜とかつおぶしの軟飯おにぎり</p>
+          <ul class="tiers">
+            <li class="tier"><div class="row"><span class="qty">1袋</span><span class="amt">¥1,580<span class="tax">(税込)</span></span></div></li>
+            <li class="tier is-set"><div class="row"><span class="qty">3袋セット</span><span class="amt">¥4,130<span class="tax">(税込)</span></span></div><p class="unit">1袋あたり¥203おトク</p></li>
+            <li class="tier is-set"><div class="row"><span class="qty">5袋セット</span><span class="amt">¥6,370<span class="tax">(税込)</span></span></div><p class="unit">1袋あたり¥306おトク</p></li>
+          </ul>
+        </li>
+      </ul>
+
+      <img class="lineup-fairies" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/lineup-fairies.png" alt="">
+    </section>
+
+    <section class="sets" id="campaign">
+      <img class="sets-bg" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/sets-bg-base.jpg" alt="" aria-hidden="true">
+
+      <div class="sets-panel panel-sets" aria-hidden="true"></div>
+
+      <i class="sets-title-bar" style="left:56px;top:101px;width:259px"></i>
+      <i class="sets-title-bar" style="left:56px;top:136px;width:259px"></i>
+      <h2 class="sets-title" style="top:78px">商品を組み合わせるより<br>セットの方がおトクです</h2>
+      <p class="sets-lead" style="left:32px;top:157px;width:296px">単品を同じ点数バラ買いした場合の合計と比較。カードをタップすると各セットの商品ページへ移動します。</p>
+
+      <a class="set-card" href="https://shop.eatbyhand.co.jp/discount/allset7912?redirect=%2Fproducts%2Fassortment" data-handle="assortment">
+        <span class="set-ribbon is-limited">期間限定</span>
+        <img class="thumb" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/sets-set-all.jpg" alt="全種セット">
+        <p class="name">全種セット</p>
+        <p class="desc">全7種コンプリート<br>【単品合計だと¥11,500】</p>
+        <span class="off">今だけ！20%OFF・1,978円おトク！！</span>
+        <p class="was">通常<br><s>¥9,890(税込)</s></p>
+        <p class="now">¥7,912<span class="tax">(税込)</span></p>
+      </a>
+
+      <a class="set-card" href="https://shop.eatbyhand.co.jp/products/starterset" data-handle="starterset">
+        <img class="thumb" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/sets-set-starter.jpg" alt="つかみ食べスタート2種セット">
+        <p class="name">つかみ食べスタート<br>2種セット</p>
+        <p class="desc">おやき+ぶた肉ハンバーグ<br>【単品合計だと¥3,380】</p>
+        <span class="off">7%OFF・250円おトク</span>
+        <p class="now">¥3,130<span class="tax">(税込)</span></p>
+      </a>
+
+      <a class="set-card" href="https://shop.eatbyhand.co.jp/products/riceball_assort" data-handle="riceball_assort">
+        <img class="thumb" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/sets-set-riceball.jpg" alt="軟飯おにぎり3種セット">
+        <p class="name">軟飯おにぎり<br>3種セット</p>
+        <p class="desc">おにぎり全3種<br>【単品合計だと¥4,740】</p>
+        <span class="off">13%OFF・610円おトク</span>
+        <p class="now">¥4,130<span class="tax">(税込)</span></p>
+      </a>
+
+      <a class="set-card" href="https://shop.eatbyhand.co.jp/products/all_set" data-handle="all_set">
+        <img class="thumb" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/sets-set-souzai.jpg" alt="そうざい4種セット">
+        <p class="name">そうざい<br>4種セット</p>
+        <p class="desc">おやき+ハンバーグ全3種<br>【単品合計だと¥6,760】</p>
+        <span class="off">8%OFF・550円おトク</span>
+        <p class="now">¥6,210<span class="tax">(税込)</span></p>
+      </a>
+
+      <div class="sets-panel panel-bulk" aria-hidden="true"></div>
+
+      <i class="sets-title-bar" style="left:88px;top:1655px;width:196px"></i>
+      <i class="sets-title-bar" style="left:88px;top:1689px;width:190px"></i>
+      <i class="sets-title-bar" style="left:88px;top:1722px;width:196px"></i>
+      <h2 class="sets-title" style="top:1629px">同じフレーバーを<br>複数袋買うほど、<br>単価が下がります</h2>
+      <p class="bulk-note">まとめ買いすると1袋あたりの価格がおトクになります。価格はすべて税込です。</p>
+
+      <div class="bulk-group">
+        <span class="bulk-dot" style="top:1846px"></span><p class="head" style="top:1846px">おやき・<br>豆腐ハンバーグ系(4種)</p>
+        <img class="icon" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/sets-bulk-souzai.png" alt="" style="left:270px;top:1832px">
+
+        <div class="bulk-row" style="top:1907px">
+          <span class="qty">1袋</span>
+          <span class="amt">¥1,690<span class="tax">(税込)</span></span>
+        </div>
+        <div class="bulk-row is-off" style="top:1950px">
+          <span class="qty">3袋</span>
+          <span class="amt">¥4,550<span class="tax">(税込)</span></span>
+          <span class="off" style="left:246px">10%OFF</span>
+        </div>
+        <div class="bulk-row is-off" style="top:1993px">
+          <span class="qty">5袋</span>
+          <span class="amt">¥7,080<span class="tax">(税込)</span></span>
+          <span class="off" style="left:246px">16%OFF</span>
+        </div>
+
+        <span class="bulk-dot" style="top:2079px"></span><p class="head" style="top:2093px">軟飯おにぎり系(3種)</p>
+        <i class="bulk-sep" style="top:2041px"></i>
+        <i class="bulk-sep" style="top:2259px"></i>
+        <img class="icon" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/sets-bulk-riceball.png" alt="" style="left:280px;top:2050px">
+
+        <div class="bulk-row" style="top:2125px">
+          <span class="qty">1袋</span>
+          <span class="amt">¥1,580<span class="tax">(税込)</span></span>
+        </div>
+        <div class="bulk-row is-off" style="top:2168px">
+          <span class="qty">3袋</span>
+          <span class="amt">¥4,130<span class="tax">(税込)</span></span>
+          <span class="off" style="left:239px">13%OFF</span>
+        </div>
+        <div class="bulk-row is-off" style="top:2211px">
+          <span class="qty">5袋</span>
+          <span class="amt">¥6,370<span class="tax">(税込)</span></span>
+          <span class="off" style="left:246px">19%OFF</span>
+        </div>
+      </div>
+
+      <svg class="sets-cloud cloud-a" viewBox="0 0 313 183" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M28 88 C16 44 62 12 118 14 C176 4 246 -2 288 22 C330 46 330 78 314 100 C332 124 300 160 240 172 C182 182 116 180 60 172 C16 164 -4 132 28 88 Z"/>
+      </svg>
+      <p class="sets-cloud-text cloud-a-text">※定期便を選ぶと、<br>セット価格からさらに<br><span class="accent">10%OFF</span>になります</p>
+
+      <svg class="sets-cloud cloud-b" viewBox="0 0 321 199" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M28 96 C16 48 64 14 122 16 C182 4 252 -2 296 24 C338 50 338 84 322 108 C340 134 306 172 244 186 C184 196 116 194 58 186 C14 178 -6 142 28 96 Z"/>
+      </svg>
+      <p class="sets-cloud-text cloud-b-text">※各商品ページで<br>袋数を選んで購入できます。<br>定期便ならさらに<br><span class="accent">10%OFF</span>になります</p>
+
+      <a class="sets-cta" href="https://shop.eatbyhand.co.jp/collections/all">在庫・レビューも含めて<br>商品一覧ページで確認する<svg viewBox="0 0 9 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l7 8.5L1 18" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </section>
+
+    <section class="flow" id="flow">
+      <img class="flow-bg" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/flow-bg-blob.jpg" alt="" aria-hidden="true">
+      <h2 class="flow-heading">ご利用の流れ</h2>
+
+      <ol class="flow-steps">
+        <li>
+          <span class="num">1</span>
+          <span class="circle"></span>
+          <img class="icon" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/flow-icon-1.png" alt="">
+          <p class="ttl">注文する</p>
+          <p class="txt">商品を選んでオンラインで注文</p>
+        </li>
+        <li>
+          <span class="num">2</span>
+          <span class="circle"></span>
+          <img class="icon" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/flow-icon-2.png" alt="">
+          <p class="ttl">冷凍で届く</p>
+          <p class="txt">最短3営業日で発送、配送日時指定可</p>
+        </li>
+        <li>
+          <span class="num">3</span>
+          <span class="circle"></span>
+          <img class="icon" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/flow-icon-3.png" alt="">
+          <p class="ttl">レンジで<br>温めるだけ</p>
+          <p class="txt">調理不要、そのまま食卓へ</p>
+        </li>
+      </ol>
+
+      <img class="flow-arrow flow-arrow-1" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/flow-arrow.png" alt="">
+      <img class="flow-arrow flow-arrow-2" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/flow-arrow.png" alt="">
+    </section>
+
+    <section class="faq" id="faq">
+      <h2 class="faq-heading">よくある質問</h2>
+
+      <div class="faq-list">
+        <details open>
+          <summary>何ヶ月頃から食べられますか?<i class="plus"></i></summary>
+          <p class="answer">目安は生後9ヶ月頃、歯が5〜8本で離乳食後期が食べられればご利用いただけます。</p>
+        </details>
+        <details>
+          <summary>賞味期限はどれくらいですか?<i class="plus"></i></summary>
+          <p class="answer">正しい保管で製造から1年、解凍後は2〜3日以内にお召し上がりください。</p>
+        </details>
+        <details>
+          <summary>アレルギー対応は?<i class="plus"></i></summary>
+          <p class="answer">7大アレルゲン不使用ですが、工場では乳製品等を扱うため重篤な場合は医師にご相談ください。</p>
+        </details>
+        <details>
+          <summary>キャンセル・返品はできますか?<i class="plus"></i></summary>
+          <p class="answer">キャンセルは注文翌日朝10時まで、食品のため返品は不可、不良品・注文違いのみ交換対応いたします。</p>
+        </details>
+        <details>
+          <summary>送料はいくらですか?<i class="plus"></i></summary>
+          <p class="answer">全国一律¥1,100(税込)です。¥10,000以上のご注文で送料無料になります</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="final" id="final">
+      <img class="final-bunting-l" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/final-bunting-l.png" alt="">
+      <img class="final-bunting-r" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/final-bunting-r.png" alt="">
+      <img class="final-crown" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/final-crown.png" alt="">
+
+      <i class="final-lead-bar" aria-hidden="true"></i>
+      <p class="final-lead">今なら！<br>期間限定、<br>全種セットが<span class="price">¥7,912</span>。</p>
+      <p class="final-sub">今日から「<span class="brand">てでもぐ</span>」、<br>始めませんか?</p>
+
+      <div class="final-badges">
+        <img src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/final-badge-1.png" alt="管理栄養士監修">
+        <img src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/final-badge-2.png" alt="口コミ評価 星4.33">
+        <img src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/final-badge-3.png" alt="全国配送対応">
+      </div>
+
+      <a class="final-cta" href="https://shop.eatbyhand.co.jp/collections/all">
+        商品を見てみる
+        <svg viewBox="0 0 9 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l7 8.5L1 18" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <footer class="final-footer">
+        <img class="bg" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/final-footer.jpg" alt="" aria-hidden="true">
+        <img class="birds" src="https://cdn.shopify.com/s/files/1/0641/7576/7770/files/final-birds.png" alt="" aria-hidden="true">
+        <nav>
+          <a href="https://shop.eatbyhand.co.jp/pages/about">運営会社情報</a><span class="divider">|</span><a href="https://shop.eatbyhand.co.jp/policies/privacy-policy">プライバシーポリシー</a>
+        </nav>
+        <p class="copy">© TEDEMOGU</p>
+      </footer>
+    </section>
+
+  </div>
+
+  <div class="sticky-cta" id="stickyCta">
+    <a href="https://shop.eatbyhand.co.jp/discount/allset7912?redirect=%2Fproducts%2Fassortment">
+      <span class="badge">期間限定20%OFF</span>
+      <span class="text">全種セットを見る</span>
+      <svg class="arrow" viewBox="0 0 9 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l7 8.5L1 18" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</div>
+</div>
+
+<script>
+/* FAQ accordion: slide the answer open and shut.
+   <details> stays the source of truth, so keyboard use, focus and
+   screen readers keep working; this only animates the height between
+   the two states. Under prefers-reduced-motion, or in a background tab
+   where animations are throttled, the browser's own instant toggle is
+   left alone. */
+(function () {
+  'use strict';
+
+  var items = document.querySelectorAll('.faq-list details');
+  if (!items.length || typeof Element.prototype.animate !== 'function') return;
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var DURATION = 260;
+  var EASING = 'cubic-bezier(0.4, 0, 0.2, 1)';
+
+  Array.prototype.forEach.call(items, function (item) {
+    var summary = item.querySelector('summary');
+    var answer = item.querySelector('.answer');
+    if (!summary || !answer) return;
+
+    var running = null;
+
+    function play(keyframes, done) {
+      var settled = false;
+      function settle() {
+        if (settled) return;
+        settled = true;
+        running = null;
+        if (done) done();
+      }
+
+      running = answer.animate(keyframes, { duration: DURATION, easing: EASING });
+      running.onfinish = settle;
+      // Never let the open/closed state hang on the animation actually
+      // finishing — a throttled or interrupted animation would otherwise
+      // leave the item stuck half-toggled.
+      window.setTimeout(settle, DURATION + 120);
+    }
+
+    summary.addEventListener('click', function (event) {
+      if (reduce.matches || document.hidden) return;
+      event.preventDefault();
+
+      if (running) {
+        running.cancel();          // snap back to the resting height
+        running = null;
+      }
+
+      if (item.open) {
+        // Closing: bring the + back at once, then collapse.
+        var from = answer.offsetHeight;
+        item.classList.add('is-closing');
+        play([{ height: from + 'px' }, { height: '0px' }], function () {
+          item.open = false;
+          item.classList.remove('is-closing');
+        });
+      } else {
+        // Opening: reveal first so the target height can be measured.
+        item.open = true;
+        item.classList.remove('is-closing');
+        play([{ height: '0px' }, { height: answer.offsetHeight + 'px' }]);
+      }
+    });
+  });
+})();
+
+
+// 追尾CTA: hero内の「全種セット」カード(.mv-set-card)を通り過ぎたら表示し、
+// 上に戻ったら再び隠す。
+(function () {
+  var target = document.querySelector('.mv-set-card');
+  var bar = document.getElementById('stickyCta');
+  if (!target || !bar) return;
+
+  if (!('IntersectionObserver' in window)) {
+    bar.classList.add('is-visible');
+    return;
+  }
+
+  var io = new IntersectionObserver(function (entries) {
+    var entry = entries[0];
+    var scrolledPast = !entry.isIntersecting && entry.boundingClientRect.top < 0;
+    bar.classList.toggle('is-visible', scrolledPast);
+  }, { threshold: 0 });
+
+  io.observe(target);
+})();
+
+</script>
